@@ -1,5 +1,6 @@
 export ZSH=~/.oh-my-zsh
- 
+
+source /Users/lijiaqi/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 plugins=(
  zsh-autosuggestions  git zsh-syntax-highlighting z
