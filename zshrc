@@ -1,9 +1,8 @@
 export ZSH=~/.oh-my-zsh
 
-source /Users/lijiaqi/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 plugins=(
- zsh-autosuggestions  git zsh-syntax-highlighting z
+ zsh-autosuggestions git zsh-syntax-highlighting z
 )
 
 
@@ -17,7 +16,7 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 #POWERLEVEL9K_SHORTEN_DELIMITER="~"
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_MODE='default'
 #POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #POWERLEVEL9K_SHORTEN_DELIMITER=""
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
@@ -31,8 +30,8 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{blue}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\u2500%F{white} "
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE_COUNT=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir dir_writable newline
-                                   time public_ip command_execution_time  status  background_jobs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon virtualenv root_indicator dir dir_writable newline
+                                   time command_execution_time  status  background_jobs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
 POWERLEVEL9K_PUBLIC_IP_BACKGROUND="clear"
 #POWERLEVEL9K_VCS_CLEAN_BACKGROUND='clear'
