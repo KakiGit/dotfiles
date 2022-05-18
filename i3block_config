@@ -34,7 +34,11 @@
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume-pulseaudio/volume-pulseaudio -a
+separator_block_width=5
+interval=once
+signal=10
 #[volume]
 #command=~/.config/i3blocks/volume/volume
 ##label=♪
@@ -76,17 +80,19 @@ interval=30
 [iface]
 command=~/.config/i3blocks/iface/iface
 #IFACE=wlan0
-color=#00FF00
-interval=10
-# separator=false
-
-[wifi]
-#INTERFACE=wlp3s0
-label=wifi:
+# color=#00FF00
 interval=10
 separator=false
+# separator=false
+
+#[wifi]
+#INTERFACE=wlp3s0
+#label=wifi:
+#interval=10
+#separator=false
 
 [bandwidth]
+command=~/.config/i3blocks/bandwidth/bandwidth
 #INTERFACE=eth0
 interval=5
 
@@ -108,10 +114,11 @@ interval=5
 # Battery indicator
 #
 # The battery instance defaults to 0.
-#[battery]
+[battery]
 #label=BAT
-##label=⚡
-#interval=30
+command=~/.config/i3blocks/battery/battery
+label=⚡
+interval=30
 
 # Date Time
 #
