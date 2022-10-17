@@ -235,4 +235,4 @@ bar {
 # exec i3-config-wizard
 exec_always --no-startup-id feh --bg-max ~/Downloads/cloud.jpg
 exec --no-startup-id fcitx
-
+exec --no-startup-id copyq
