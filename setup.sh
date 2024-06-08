@@ -22,8 +22,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ${HOME}/.fzf/install --all
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
+# git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+mkdir -p ~/.vim_runtime/autoload
+# sh ~/.vim_runtime/install_awesome_vimrc.sh
 curl -o "${HOME}/.vim_runtime/my_configs.vim" https://raw.githubusercontent.com/KakiGit/dotfiles/master/my_configs.vim
 curl -o "${HOME}/.tmux.conf" https://raw.githubusercontent.com/KakiGit/dotfiles/master/tmux.conf
 curl -fLo "${HOME}/.vim_runtime/autoload/plug.vim" --create-dirs \
