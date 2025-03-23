@@ -29,6 +29,8 @@ set $urgent-bg-color     #ff8730
 
 focus_follows_mouse no
 
+default_border none
+
 # window colors
 #                        border                 background             text                 indicator
 client.focused           $bg-color              $bg-color              $text-color          #519e52
@@ -253,5 +255,6 @@ for_window [app_id="copyq"] floating enable, resize set 500 1000
 # exec i3-config-wizard
 # exec_always --no-startup-id feh --bg-max ~/Downloads/cloud.jpg
 output "*" background "~/Downloads/boat.jpg" fill
-exec --no-startup-id fcitx
+exec fcitx
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec /usr/lib/xdg-desktop-portal -r
