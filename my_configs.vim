@@ -87,6 +87,10 @@ nmap <silent> <c-l> :wincmd l<CR>
 let g:NERDTreeWinPos = "left"
 nnoremap <Leader>nf :NERDTreeFind<CR>
 
+vnoremap <leader>y :w !copyq add -<CR><CR>
+nnoremap <leader>yy :.w !copyq add<CR>
+nnoremap <Leader>p :r<Home>silent <End>!copyq read 0<CR><CR>
+
 let g:ycm_key_list_select_completion=['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion=['<S-Tab>', '<Up>']
 map <M-n> :LspHover<CR>
