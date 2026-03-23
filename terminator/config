@@ -2325,5 +2325,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = IR_Black
+      profile = Ayu mirage
 [plugins]

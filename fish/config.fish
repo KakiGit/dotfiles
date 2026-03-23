@@ -1,9 +1,12 @@
 if status is-interactive
     set -gx EDITOR nvim
 
-    alias nv="nvim"
-    alias lg="lazygit"
-    alias yz="yazi"
+    abbr --add nv "nvim"
+    abbr --add lg "lazygit"
+    abbr --add yz "yazi"
+    abbr --add gst git status
+    abbr --add gcmsg git commit -m
+    abbr --add gaa git add --all
 
     fish_add_path $HOME/bin
 
