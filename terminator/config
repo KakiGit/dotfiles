@@ -2,7 +2,6 @@
   borderless = True
   extra_styling = False
   inactive_color_offset = 1.0
-  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   always_split_with_profile = True
   putty_paste_style_source_clipboard = True
 [keybindings]
@@ -26,7 +25,7 @@
     scrollback_infinite = True
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[1984 Dark]]
     background_color = "#0d1926"
     cursor_bg_color = "#c4e9ff"
@@ -36,7 +35,7 @@
     palette = "#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6:#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Aco]]
     background_color = "#1f1305"
     cursor_bg_color = "#bae2fb"
@@ -46,7 +45,7 @@
     palette = "#3f3f3f:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#bebebe:#474747:#ff1e8e:#8eff1e:#ff8e1e:#0883ff:#8e1eff:#1eff8e:#c4c4c4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Adventure]]
     background_color = "#040404"
     cursor_bg_color = "#feffff"
@@ -56,7 +55,7 @@
     palette = "#040404:#d84a33:#5da602:#eebb6e:#417ab3:#e5c499:#bdcfe5:#dbded8:#685656:#d76b42:#99b52c:#ffb670:#97d7ef:#aa7900:#bdcfe5:#e4d5c7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[AdventureTime]]
     background_color = "#1f1d45"
     cursor_bg_color = "#efbf38"
@@ -66,7 +65,7 @@
     palette = "#050404:#bd0013:#4ab118:#e7741e:#0f4ac6:#665993:#70a598:#f8dcc0:#4e7cbf:#fc5f5a:#9eff6e:#efc11a:#1997c6:#9b5953:#c8faf4:#f6f5fb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[3024 Day]]
     background_color = "#f7f7f7"
     cursor_bg_color = "#4a4543"
@@ -76,7 +75,7 @@
     palette = "#090300:#db2d20:#01a252:#fded02:#01a0e4:#a16a94:#b5e4f4:#a5a2a2:#5c5855:#e8bbd0:#3a3432:#4a4543:#807d7c:#d6d5d4:#cdab53:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[3024 Night]]
     background_color = "#090300"
     cursor_bg_color = "#a5a2a2"
@@ -86,7 +85,7 @@
     palette = "#090300:#db2d20:#01a252:#fded02:#01a0e4:#a16a94:#b5e4f4:#a5a2a2:#5c5855:#e8bbd0:#3a3432:#4a4543:#807d7c:#d6d5d4:#cdab53:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[After Dark]]
     background_color = "#10111b"
     cursor_bg_color = "#aaaaaa"
@@ -96,7 +95,7 @@
     palette = "#2e3436:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#d3d7cf:#555753:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Afterglow]]
     background_color = "#212121"
     cursor_bg_color = "#d0d0d0"
@@ -106,7 +105,7 @@
     palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Andromeda]]
     background_color = "#23262e"
     cursor_bg_color = "#f8f8f0"
@@ -116,7 +115,7 @@
     palette = "#000000:#f92672:#00e8c6:#ffe66d:#7cb7ff:#c74ded:#96e072:#e5e5e5:#666666:#ee5d43:#96e072:#f39c12:#7cb7ff:#ff00aa:#00e8c6:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Apple Classic]]
     background_color = "#2c2b2b"
     cursor_bg_color = "#c7c7c7"
@@ -126,7 +125,7 @@
     palette = "#000000:#c91b00:#00c200:#c7c400:#0225c7:#ca30c7:#00c5c7:#c7c7c7:#686868:#ff6e67:#5ffa68:#fffc67:#6871ff:#ff77ff:#60fdff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Arthur]]
     background_color = "#1c1c1c"
     cursor_bg_color = "#e2bbef"
@@ -136,7 +135,7 @@
     palette = "#3d352a:#cd5c5c:#86af80:#e8ae5b:#6495ed:#deb887:#b0c4de:#bbaa99:#554444:#cc5533:#88aa22:#ffa75d:#87ceeb:#996600:#b0c4de:#ddccbb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Atom]]
     background_color = "#161719"
     cursor_bg_color = "#d0d0d0"
@@ -146,7 +145,7 @@
     palette = "#000000:#fd5ff1:#87c38a:#ffd7b1:#85befd:#b9b6fc:#85befd:#e0e0e0:#000000:#fd5ff1:#94fa36:#f5ffa8:#96cbfe:#b9b6fc:#85befd:#e0e0e0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[AtomOneLight]]
     background_color = "#f9f9f9"
     cursor_bg_color = "#bbbbbb"
@@ -156,7 +155,7 @@
     palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Aurora]]
     background_color = "#0f1c21"
     cursor_bg_color = "#00485a"
@@ -166,7 +165,7 @@
     palette = "#0f1c21:#046655:#04c975:#b5bd68:#308891:#94a5bc:#8abeb7:#80b6ad:#0f1c21:#046655:#04c975:#b5bd68:#308891:#94a5bc:#8abeb7:#80b6ad"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[ayu]]
     background_color = "#0f1419"
     cursor_bg_color = "#f29718"
@@ -176,7 +175,7 @@
     palette = "#000000:#ff3333:#b8cc52:#e7c547:#36a3d9:#f07178:#95e6cb:#ffffff:#323232:#ff6565:#eafe84:#fff779:#68d5ff:#ffa3aa:#c7fffd:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ayu mirage]]
     background_color = "#1f2430"
     cursor_bg_color = "#ffcc66"
@@ -186,7 +185,7 @@
     palette = "#191e2a:#ed8274:#a6cc70:#fad07b:#6dcbfa:#cfbafa:#90e1c6:#c7c7c7:#686868:#f28779:#bae67e:#ffd580:#73d0ff:#d4bfff:#95e6cb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[ayu_light]]
     background_color = "#fafafa"
     cursor_bg_color = "#ff6a00"
@@ -196,7 +195,7 @@
     palette = "#000000:#ff3333:#86b300:#f29718:#41a6d9:#f07178:#4dbf99:#ffffff:#323232:#ff6565:#b8e532:#ffc94a:#73d8ff:#ffa3aa:#7ff1cb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Azu]]
     background_color = "#09111a"
     cursor_bg_color = "#d2e8fc"
@@ -206,7 +205,7 @@
     palette = "#000000:#ac6d74:#74ac6d:#aca46d:#6d74ac:#a46dac:#6daca4:#e6e6e6:#262626:#d6b8bc:#bcd6b8:#d6d3b8:#b8bcd6:#d3b8d6:#b8d6d3:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Banana Blueberry]]
     background_color = "#191323"
     cursor_bg_color = "#e07d13"
@@ -216,7 +215,7 @@
     palette = "#17141f:#ff6b7f:#00bd9c:#e6c62f:#22e8df:#dc396a:#56b6c2:#f1f1f1:#495162:#fe9ea1:#98c379:#f9e46b:#91fff4:#da70d6:#bcf3ff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Batman]]
     background_color = "#1b1d1e"
     cursor_bg_color = "#fcef0c"
@@ -226,7 +225,7 @@
     palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Bloody]]
     background_color = "#1e1f29"
     cursor_bg_color = "#f9dc5c"
@@ -235,7 +234,7 @@
     palette = "#2e3436:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea:#555753:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[BlulocoDark]]
     background_color = "#282c34"
     cursor_bg_color = "#ffcc00"
@@ -245,7 +244,7 @@
     palette = "#41444d:#fc2f52:#25a45c:#ff936a:#3476ff:#7a82da:#4483aa:#cdd4e0:#8f9aae:#ff6480:#3fc56b:#f9c859:#10b1fe:#ff78f8:#5fb9bc:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Bright Lights]]
     background_color = "#191919"
     cursor_bg_color = "#f34b00"
@@ -255,7 +254,7 @@
     palette = "#191919:#ff355b:#b7e876:#ffc251:#76d4ff:#ba76e7:#6cbfb5:#c2c8d7:#191919:#ff355b:#b7e876:#ffc251:#76d5ff:#ba76e7:#6cbfb5:#c2c8d7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Broadcast]]
     background_color = "#2b2b2b"
     cursor_bg_color = "#ffffff"
@@ -265,7 +264,7 @@
     palette = "#000000:#da4939:#519f50:#ffd24a:#6d9cbe:#d0d0ff:#6e9cbe:#ffffff:#323232:#ff7b6b:#83d182:#ffff7c:#9fcef0:#ffffff:#a0cef0:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Brogrammer]]
     background_color = "#131313"
     cursor_bg_color = "#b9b9b9"
@@ -275,7 +274,7 @@
     palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Cai]]
     background_color = "#09111a"
     cursor_bg_color = "#e3eef9"
@@ -285,7 +284,7 @@
     palette = "#000000:#ca274d:#4dca27:#caa427:#274dca:#a427ca:#27caa4:#808080:#808080:#e98da3:#a3e98d:#e9d48d:#8da3e9:#d48de9:#8de9d4:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Catppuccin_Frappe]]
     background_color = "#303446"
     cursor_bg_color = "#f2d5cf"
@@ -295,7 +294,7 @@
     palette = "#51576d:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#b5bfe2:#626880:#e78284:#a6d189:#e5c890:#8caaee:#f4b8e4:#81c8be:#a5adce"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Catppuccin_Latte]]
     background_color = "#eff1f5"
     cursor_bg_color = "#dc8a78"
@@ -305,7 +304,7 @@
     palette = "#5c5f77:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#acb0be:#6c6f85:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#bcc0cc"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Catppuccin_Macchiato]]
     background_color = "#24273a"
     cursor_bg_color = "#f4dbd6"
@@ -315,7 +314,7 @@
     palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Catppuccin_Mocha]]
     background_color = "#1e1e2e"
     cursor_bg_color = "#f5e0dc"
@@ -325,7 +324,7 @@
     palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Chalk]]
     background_color = "#2b2d2e"
     cursor_bg_color = "#708284"
@@ -335,7 +334,7 @@
     palette = "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Chalkboard]]
     background_color = "#29262f"
     cursor_bg_color = "#d9e6f2"
@@ -345,7 +344,7 @@
     palette = "#000000:#c37372:#72c373:#c2c372:#7372c3:#c372c2:#72c2c3:#d9d9d9:#323232:#dbaaaa:#aadbaa:#dadbaa:#aaaadb:#dbaada:#aadadb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Chalkby]]
     background_color = "#1f2d2d"
     cursor_bg_color = "#ffffff"
@@ -355,7 +354,7 @@
     palette = "#2e3436:#ffb0b0:#c8ff9b:#fffca4:#6f9ceb:#9395d3:#bdeaff:#d3d7cf:#555753:#ffb0b0:#c8ff9b:#fffca4:#6f9ceb:#9395d3:#bdeaff:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Chesterish]]
     background_color = "#293340"
     cursor_bg_color = "#2c85f7"
@@ -365,7 +364,7 @@
     palette = "#293340:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9:#546386:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Cobalt Neon]]
     background_color = "#142838"
     cursor_bg_color = "#c4206f"
@@ -375,7 +374,7 @@
     palette = "#142631:#ff2320:#3ba5ff:#e9e75c:#8ff586:#781aa0:#8ff586:#ba46b2:#fff688:#d4312e:#8ff586:#e9f06d:#3c7dd2:#8230a7:#6cbc67:#8ff586"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Cobalt2]]
     background_color = "#132738"
     cursor_bg_color = "#f0cc09"
@@ -385,7 +384,7 @@
     palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#f40e17:#3bd01d:#edc809:#5555ff:#ff55ff:#6ae3fa:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[CrayonPonyFish]]
     background_color = "#150707"
     cursor_bg_color = "#68525a"
@@ -395,7 +394,7 @@
     palette = "#2b1b1d:#91002b:#579524:#ab311b:#8c87b0:#692f50:#e8a866:#68525a:#3d2b2e:#c5255d:#8dff57:#c8381d:#cfc9ff:#fc6cba:#ffceaf:#b0949d"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Darkside]]
     background_color = "#222324"
     cursor_bg_color = "#bbbbbb"
@@ -405,7 +404,7 @@
     palette = "#000000:#e8341c:#68c256:#f2d42c:#1c98e8:#8e69c9:#1c98e8:#bababa:#000000:#e05a4f:#77b869:#efd64b:#387cd3:#957bbe:#3d97e2:#bababa"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[deep]]
     background_color = "#090909"
     cursor_bg_color = "#d0d0d0"
@@ -415,7 +414,7 @@
     palette = "#000000:#d70005:#1cd915:#d9bd26:#5665ff:#b052da:#50d2da:#e0e0e0:#535353:#fb0007:#22ff18:#fedc2b:#9fa9ff:#e09aff:#8df9ff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Desert]]
     background_color = "#333333"
     cursor_bg_color = "#00ff00"
@@ -425,7 +424,7 @@
     palette = "#4d4d4d:#ff2b2b:#98fb98:#f0e68c:#cd853f:#ffdead:#ffa0a0:#f5deb3:#555555:#ff5555:#55ff55:#ffff55:#87ceff:#ff55ff:#ffd700:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[DimmedMonokai]]
     background_color = "#1f1f1f"
     cursor_bg_color = "#f83e19"
@@ -435,7 +434,7 @@
     palette = "#3a3d43:#be3f48:#879a3b:#c5a635:#4f76a1:#855c8d:#578fa4:#b9bcba:#888987:#fb001f:#0f722f:#c47033:#186de3:#fb0067:#2e706d:#fdffb9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[DotGov]]
     background_color = "#262c35"
     cursor_bg_color = "#d9002f"
@@ -445,7 +444,7 @@
     palette = "#191919:#bf091d:#3d9751:#f6bb34:#17b2e0:#7830b0:#8bd2ed:#ffffff:#191919:#bf091d:#3d9751:#f6bb34:#17b2e0:#7830b0:#8bd2ed:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Dracula]]
     background_color = "#1e1f29"
     cursor_bg_color = "#aaaaaa"
@@ -455,7 +454,7 @@
     palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Duotone Dark]]
     background_color = "#1f1d27"
     cursor_bg_color = "#ff9839"
@@ -465,7 +464,7 @@
     palette = "#1f1d27:#d9393e:#2dcd73:#d9b76e:#ffc284:#de8d40:#2488ff:#b7a1ff:#353147:#d9393e:#2dcd73:#d9b76e:#ffc284:#de8d40:#2488ff:#eae5ff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Earthsong]]
     background_color = "#292520"
     cursor_bg_color = "#f6f7ec"
@@ -475,7 +474,7 @@
     palette = "#121418:#c94234:#85c54c:#f5ae2e:#1398b9:#d0633d:#509552:#e5c6aa:#675f54:#ff645a:#98e036:#e0d561:#5fdaff:#ff9269:#84f088:#f6f7ec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Espresso]]
     background_color = "#323232"
     cursor_bg_color = "#d6d6d6"
@@ -485,7 +484,7 @@
     palette = "#353535:#d25252:#a5c261:#ffc66d:#6c99bb:#d197d9:#bed6ff:#eeeeec:#535353:#f00c0c:#c2e075:#e1e48b:#8ab7d9:#efb5f7:#dcf4ff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[FirefoxDev]]
     background_color = "#0e1011"
     cursor_bg_color = "#708284"
@@ -495,7 +494,7 @@
     palette = "#002831:#e63853:#5eb83c:#a57706:#359ddf:#d75cff:#4b73a2:#dcdcdc:#001e27:#e1003f:#1d9000:#cd9409:#006fc0:#a200da:#005794:#e2e2e2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Firewatch]]
     background_color = "#1e2027"
     cursor_bg_color = "#f6f7ec"
@@ -505,7 +504,7 @@
     palette = "#585f6d:#d95360:#5ab977:#dfb563:#4d89c4:#d55119:#44a8b6:#e6e5ff:#585f6d:#d95360:#5ab977:#dfb563:#4c89c5:#d55119:#44a8b6:#e6e5ff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Flatland]]
     background_color = "#1d1f21"
     cursor_bg_color = "#708284"
@@ -515,7 +514,7 @@
     palette = "#1d1d19:#f18339:#9fd364:#f4ef6d:#5096be:#695abc:#d63865:#ffffff:#1d1d19:#d22a24:#a7d42c:#ff8949:#61b9d0:#695abc:#d63865:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[ForestBlue]]
     background_color = "#051519"
     cursor_bg_color = "#9e9ecb"
@@ -525,7 +524,7 @@
     palette = "#333333:#f8818e:#92d3a2:#1a8e63:#8ed0ce:#5e468c:#31658c:#e2d8cd:#3d3d3d:#fb3d66:#6bb48d:#30c85a:#39a7a2:#7e62b3:#6096bf:#e2d8cd"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Galaxy]]
     background_color = "#1d2837"
     cursor_bg_color = "#bbbbbb"
@@ -535,7 +534,7 @@
     palette = "#000000:#f9555f:#21b089:#fef02a:#589df6:#944d95:#1f9ee7:#bbbbbb:#555555:#fa8c8f:#35bb9a:#ffff55:#589df6:#e75699:#3979bc:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Halcyon]]
     background_color = "#171c28"
     cursor_bg_color = "#5ccfe6"
@@ -545,7 +544,7 @@
     palette = "#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2:#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Harper]]
     background_color = "#010101"
     cursor_bg_color = "#a8a49d"
@@ -555,7 +554,7 @@
     palette = "#010101:#f8b63f:#7fb5e1:#d6da25:#489e48:#b296c6:#f5bfd7:#a8a49d:#726e6a:#f8b63f:#7fb5e1:#d6da25:#489e48:#b296c6:#f5bfd7:#fefbea"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Horizon]]
     background_color = "#1c1e26"
     cursor_bg_color = "#e95379"
@@ -565,7 +564,7 @@
     palette = "#e9436f:#f9cbbe:#ffaf87:#27d796:#6c6f93:#fdf0ed:#fadad1:#b877db:#e95379:#fadad1:#fac29a:#09f7a0:#6c6f8a:#ffffff:#eddad1:#b88adb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Homebrew]]
     cursor_bg_color = "#23ff18"
     foreground_color = "#00ff00"
@@ -574,7 +573,7 @@
     palette = "#000000:#990000:#00a600:#999900:#0000b2:#b200b2:#00a6b2:#bfbfbf:#666666:#e50000:#00d900:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hybrid]]
     background_color = "#161719"
     cursor_bg_color = "#b7bcba"
@@ -584,7 +583,7 @@
     palette = "#2a2e33:#b84d51:#b3bf5a:#e4b55e:#6e90b0:#a17eac:#7fbfb4:#b5b9b6:#1d1f22:#8d2e32:#798431:#e58a50:#4b6b88:#6e5079:#4d7b74:#5a626a"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[idleToes]]
     background_color = "#323232"
     cursor_bg_color = "#d6d6d6"
@@ -594,7 +593,7 @@
     palette = "#323232:#d25252:#7fe173:#ffc66d:#4099ff:#f680ff:#bed6ff:#eeeeec:#535353:#f07070:#9dff91:#ffe48b:#5eb7f7:#ff9dff:#dcf4ff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Japanesque]]
     background_color = "#1e1e1e"
     cursor_bg_color = "#edcf4f"
@@ -604,7 +603,7 @@
     palette = "#343935:#cf3f61:#7bb75b:#e9b32a:#4c9ad4:#a57fc4:#389aad:#fafaf6:#595b59:#d18fa6:#767f2c:#78592f:#135979:#604291:#76bbca:#b2b5ae"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Jellybeans]]
     background_color = "#121212"
     cursor_bg_color = "#ffa560"
@@ -614,7 +613,7 @@
     palette = "#929292:#e27373:#94b979:#ffba7b:#97bedc:#e1c0fa:#00988e:#dedede:#bdbdbd:#ffa1a1:#bddeab:#ffdca0:#b1d8f6:#fbdaff:#1ab2a8:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[JetBrains Darcula]]
     background_color = "#202020"
     cursor_bg_color = "#ffffff"
@@ -624,7 +623,7 @@
     palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Abernathy]]
     background_color = "#111416"
     cursor_bg_color = "#bbbbbb"
@@ -634,7 +633,7 @@
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#1093f5:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#11b5f6:#ff00ff:#00ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Alabaster]]
     background_color = "#f7f7f7"
     cursor_bg_color = "#007acc"
@@ -644,7 +643,7 @@
     palette = "#000000:#aa3731:#448c27:#cb9000:#325cc0:#7a3e9d:#0083b2:#f7f7f7:#777777:#f05050:#60cb00:#ffbc5d:#007acc:#e64ce6:#00aacb:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[AlienBlood]]
     background_color = "#0f1610"
     cursor_bg_color = "#73fa91"
@@ -654,7 +653,7 @@
     palette = "#112616:#7f2b27:#2f7e25:#717f24:#2f6a7f:#47587f:#327f77:#647d75:#3c4812:#e08009:#18e000:#bde000:#00aae0:#0058e0:#00e0c4:#73fa91"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Argonaut]]
     background_color = "#0e1019"
     cursor_bg_color = "#ff0018"
@@ -664,7 +663,7 @@
     palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[AtelierSulphurpool]]
     background_color = "#202746"
     cursor_bg_color = "#979db4"
@@ -674,7 +673,7 @@
     palette = "#202746:#c94922:#ac9739:#c08b30:#3d8fd1:#6679cc:#22a2c9:#979db4:#6b7394:#c76b29:#293256:#5e6687:#898ea4:#dfe2f1:#9c637a:#f5f7ff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Belafonte Day]]
     background_color = "#d5ccba"
     cursor_bg_color = "#45373c"
@@ -684,7 +683,7 @@
     palette = "#20111b:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#968c83:#5e5252:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#d5ccba"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Belafonte Night]]
     background_color = "#20111b"
     cursor_bg_color = "#968c83"
@@ -694,7 +693,7 @@
     palette = "#20111b:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#968c83:#5e5252:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#d5ccba"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Bim]]
     background_color = "#012849"
     cursor_bg_color = "#c4d0de"
@@ -704,7 +703,7 @@
     palette = "#2c2423:#f557a0:#a9ee55:#f5a255:#5ea2ec:#a957ec:#5eeea0:#918988:#918988:#f579b2:#bbee78:#f5b378:#81b3ec:#bb79ec:#81eeb2:#f5eeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[BirdsOfParadise]]
     background_color = "#2a1f1d"
     cursor_bg_color = "#573d26"
@@ -714,7 +713,7 @@
     palette = "#573d26:#be2d26:#6ba18a:#e99d2a:#5a86ad:#ac80a6:#74a6ad:#e0dbb7:#9b6c4a:#e84627:#95d8ba:#d0d150:#b8d3ed:#d19ecb:#93cfd7:#fff9d5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Blazer]]
     background_color = "#0d1926"
     cursor_bg_color = "#d9e6f2"
@@ -724,7 +723,7 @@
     palette = "#000000:#b87a7a:#7ab87a:#b8b87a:#7a7ab8:#b87ab8:#7ab8b8:#d9d9d9:#262626:#dbbdbd:#bddbbd:#dbdbbd:#bdbddb:#dbbddb:#bddbdb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Blitz]]
     background_color = "#16141e"
     cursor_bg_color = "#00ecc8"
@@ -734,7 +733,7 @@
     palette = "#2e3436:#f70047:#00ff7d:#fcdd42:#26b3d2:#b055f4:#ff8db4:#d3d7cf:#555753:#ff5555:#55ff55:#ffff55:#729fcf:#ff55ff:#34e2e2:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[BlueBerryPie]]
     background_color = "#1c0c28"
     cursor_bg_color = "#fcfad6"
@@ -744,7 +743,7 @@
     palette = "#0a4c62:#99246e:#5cb1b3:#eab9a8:#90a5bd:#9d54a7:#7e83cc:#f0e8d6:#201637:#c87272:#0a6c7e:#7a3188:#39173d:#bc94b7:#5e6071:#0a6c7e"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[BlulocoLight]]
     background_color = "#f9f9f9"
     cursor_bg_color = "#f32759"
@@ -754,7 +753,7 @@
     palette = "#373a41:#d52753:#23974a:#df631c:#275fe4:#823ff1:#27618d:#babbc2:#676a77:#ff6480:#3cbc66:#c5a332:#0099e1:#ce33c0:#6d93bb:#d3d3d3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Borland]]
     background_color = "#0000a4"
     cursor_bg_color = "#ffa560"
@@ -764,7 +763,7 @@
     palette = "#4f4f4f:#ff6c60:#a8ff60:#ffffb6:#96cbfe:#ff73fd:#c6c5fe:#eeeeee:#7c7c7c:#ffb6b0:#ceffac:#ffffcc:#b5dcff:#ff9cfe:#dfdffe:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[C64]]
     background_color = "#40318d"
     cursor_bg_color = "#7869c4"
@@ -774,7 +773,7 @@
     palette = "#090300:#883932:#55a049:#bfce72:#40318d:#8b3f96:#67b6bd:#ffffff:#000000:#883932:#55a049:#bfce72:#40318d:#8b3f96:#67b6bd:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Candy]]
     cursor_bg_color = "#aaaaaa"
     foreground_color = "#AAAAAA"
@@ -783,7 +782,7 @@
     palette = "#2e3436:#fa2573:#a6e32d:#fc951e:#c48dff:#fa2573:#67d9f0:#f2f2f2:#555753:#fa2573:#8ae234:#fce94f:#729fcf:#fa2573:#34e2e2:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[CLRS]]
     background_color = "#ffffff"
     cursor_bg_color = "#6fd3fc"
@@ -793,7 +792,7 @@
     palette = "#000000:#f8282a:#328a5d:#fa701d:#135cd0:#9f00bd:#33c3c1:#b3b3b3:#555753:#fb0416:#2cc631:#fdd727:#1670ff:#e900b0:#3ad5ce:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ciapre]]
     background_color = "#191c27"
     cursor_bg_color = "#92805b"
@@ -803,7 +802,7 @@
     palette = "#181818:#810009:#48513b:#cc8b3f:#576d8c:#724d7c:#5c4f4b:#aea47f:#555555:#ac3835:#a6a75d:#dcdf7c:#3097c6:#d33061:#f3dbb2:#f4f4f4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Dark Pastel]]
     cursor_bg_color = "#bbbbbb"
     foreground_color = "#ffffff"
@@ -812,7 +811,7 @@
     palette = "#000000:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#bbbbbb:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Elemental]]
     background_color = "#22211d"
     cursor_bg_color = "#facb80"
@@ -822,7 +821,7 @@
     palette = "#3c3c30:#98290f:#479a43:#7f7111:#497f7d:#7f4e2f:#387f58:#807974:#555445:#e0502a:#61e070:#d69927:#79d9d9:#cd7c54:#59d599:#fff1e9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Elementary]]
     background_color = "#181818"
     cursor_bg_color = "#bbbbbb"
@@ -832,7 +831,7 @@
     palette = "#242424:#d71c15:#5aa513:#fdb40c:#063b8c:#e40038:#2595e1:#efefef:#4b4b4b:#fc1c18:#6bc219:#fec80e:#0955ff:#fb0050:#3ea8fc:#8c00ec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Elio]]
     background_color = "#041a3b"
     cursor_bg_color = "#fbfbfb"
@@ -842,7 +841,7 @@
     palette = "#303030:#e1321a:#6ab017:#ffc005:#729FCF:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[ENCOM]]
     cursor_bg_color = "#bbbbbb"
     foreground_color = "#00a595"
@@ -851,7 +850,7 @@
     palette = "#000000:#9f0000:#008b00:#ffd000:#0081ff:#bc00ca:#008b8b:#bbbbbb:#555555:#ff0000:#00ee00:#ffff00:#0000ff:#ff00ff:#00cdcd:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Espresso Libre]]
     background_color = "#2a211c"
     cursor_bg_color = "#ffffff"
@@ -861,7 +860,7 @@
     palette = "#000000:#cc0000:#1a921c:#f0e53a:#0066ff:#c5656b:#06989a:#d3d7cf:#555753:#ef2929:#9aff87:#fffb5c:#43a8ed:#ff818a:#34e2e2:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Fideloper]]
     background_color = "#292f33"
     cursor_bg_color = "#d4605a"
@@ -871,7 +870,7 @@
     palette = "#292f33:#cb1e2d:#edb8ac:#b7ab9b:#2e78c2:#c0236f:#309186:#eae3ce:#092028:#d4605a:#d4605a:#a86671:#7c85c4:#5c5db2:#819090:#fcf4df"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[FishTank]]
     background_color = "#232537"
     cursor_bg_color = "#fecd5e"
@@ -881,7 +880,7 @@
     palette = "#03073c:#c6004a:#acf157:#fecd5e:#525fb8:#986f82:#968763:#ecf0fc:#6c5b30:#da4b8a:#dbffa9:#fee6a9:#b2befa:#fda5cd:#a5bd86:#f6ffec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Flat]]
     background_color = "#002240"
     cursor_bg_color = "#e5be0c"
@@ -891,7 +890,7 @@
     palette = "#222d3f:#a82320:#32a548:#e58d11:#3167ac:#781aa0:#2c9370:#b0b6ba:#212c3c:#d4312e:#2d9440:#e5be0c:#3c7dd2:#8230a7:#35b387:#e7eced"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Floraverse]]
     background_color = "#0e0d15"
     cursor_bg_color = "#bbbbbb"
@@ -901,7 +900,7 @@
     palette = "#08002e:#64002c:#5d731a:#cd751c:#1d6da1:#b7077e:#42a38c:#f3e0b8:#331e4d:#d02063:#b4ce59:#fac357:#40a4cf:#f12aae:#62caa8:#fff5db"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Freya]]
     background_color = "#252e32"
     cursor_bg_color = "#839496"
@@ -911,7 +910,7 @@
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[FunForrest]]
     background_color = "#251200"
     cursor_bg_color = "#e5591c"
@@ -921,7 +920,7 @@
     palette = "#000000:#d6262b:#919c00:#be8a13:#4699a3:#8d4331:#da8213:#ddc265:#7f6a55:#e55a1c:#bfc65a:#ffcb1b:#7cc9cf:#d26349:#e6a96b:#ffeaa3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Github]]
     background_color = "#f4f4f4"
     cursor_bg_color = "#3f3f3f"
@@ -931,7 +930,7 @@
     palette = "#3e3e3e:#970b16:#07962a:#f8eec7:#003e8a:#e94691:#89d1ec:#ffffff:#666666:#de0000:#87d5a2:#f1d007:#2e6cba:#ffa29f:#1cfafe:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Glacier]]
     background_color = "#0c1115"
     cursor_bg_color = "#6c6c6c"
@@ -941,7 +940,7 @@
     palette = "#2e343c:#bd0f2f:#35a770:#fb9435:#1f5872:#bd2523:#778397:#ffffff:#404a55:#bd0f2f:#49e998:#fddf6e:#2a8bc1:#ea4727:#a0b6d3:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Grape]]
     background_color = "#171423"
     cursor_bg_color = "#a288f7"
@@ -951,7 +950,7 @@
     palette = "#2d283f:#ed2261:#1fa91b:#8ddc20:#487df4:#8d35c9:#3bdeed:#9e9ea0:#59516a:#f0729a:#53aa5e:#b2dc87:#a9bcec:#ad81c2:#9de3eb:#a288f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Grass]]
     background_color = "#13773d"
     cursor_bg_color = "#8c2800"
@@ -961,7 +960,7 @@
     palette = "#000000:#bb0000:#00bb00:#e7b000:#0000a3:#950062:#00bbbb:#bbbbbb:#555555:#bb0000:#00bb00:#e7b000:#0000bb:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Gruvbox Dark]]
     background_color = "#1e1e1e"
     cursor_bg_color = "#bbbbbb"
@@ -971,7 +970,7 @@
     palette = "#161819:#f73028:#aab01e:#f7b125:#719586:#c77089:#7db669:#faefbb:#7f7061:#be0f17:#868715:#cc881a:#377375:#a04b73:#578e57:#e6d4a3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hardcore]]
     background_color = "#121212"
     cursor_bg_color = "#bbbbbb"
@@ -981,7 +980,7 @@
     palette = "#1b1d1e:#f92672:#a6e22e:#fd971f:#66d9ef:#9e6ffe:#5e7175:#ccccc6:#505354:#ff669d:#beed5f:#e6db74:#66d9ef:#9e6ffe:#a3babf:#f8f8f2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hemisu dark]]
     background_color = "#002b36"
     cursor_bg_color = "#BAFFAA"
@@ -991,7 +990,7 @@
     palette = "#444444:#FF0054:#B1D630:#9D895E:#67BEE3:#B576BC:#569A9F:#EDEDED:#777777:#D65E75:#BAFFAA:#ECE1C8:#9FD3E5:#DEB3DF:#B6E0E5:#FFFFFF"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hemisu light]]
     background_color = "#EFEFEF"
     cursor_bg_color = "#FF0054"
@@ -1001,7 +1000,7 @@
     palette = "#777777:#FF0055:#739100:#503D15:#538091:#5B345E:#538091:#999999:#999999:#D65E76:#9CC700:#947555:#9DB3CD:#A184A4:#85B2AA:#BABABA"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Highway]]
     background_color = "#222225"
     cursor_bg_color = "#e0d9b9"
@@ -1011,7 +1010,7 @@
     palette = "#000000:#d00e18:#138034:#ffcb3e:#006bb3:#6b2775:#384564:#ededed:#5d504a:#f07e18:#b1d130:#fff120:#4fc2fd:#de0071:#5d504a:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hipster Green]]
     background_color = "#100b05"
     cursor_bg_color = "#23ff18"
@@ -1021,7 +1020,7 @@
     palette = "#000000:#b6214a:#00a600:#bfbf00:#246eb2:#b200b2:#00a6b2:#bfbfbf:#666666:#e50000:#86a93e:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Hurtado]]
     cursor_bg_color = "#bbbbbb"
     foreground_color = "#dbdbdb"
@@ -1030,7 +1029,7 @@
     palette = "#575757:#ff1b00:#a5e055:#fbe74a:#496487:#fd5ff1:#86e9fe:#cbcccb:#262626:#d51d00:#a5df55:#fbe84a:#89beff:#c001c1:#86eafe:#dbdbdb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[IC_Green_PPL]]
     background_color = "#3a3d3f"
     cursor_bg_color = "#42ff58"
@@ -1040,7 +1039,7 @@
     palette = "#1f1f1f:#fb002a:#339c24:#659b25:#149b45:#53b82c:#2cb868:#e0ffef:#032710:#a7ff3f:#9fff6d:#d2ff6d:#72ffb5:#50ff3e:#22ff71:#daefd0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[IC_Orange_PPL]]
     background_color = "#262626"
     cursor_bg_color = "#fc531d"
@@ -1050,7 +1049,7 @@
     palette = "#000000:#c13900:#a4a900:#caaf00:#bd6d00:#fc5e00:#f79500:#ffc88a:#6a4f2a:#ff8c68:#f6ff40:#ffe36e:#ffbe55:#fc874f:#c69752:#fafaff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[IR_Black]]
     cursor_bg_color = "#808080"
     foreground_color = "#f1f1f1"
@@ -1059,7 +1058,7 @@
     palette = "#4f4f4f:#fa6c60:#a8ff60:#fffeb7:#96cafe:#fa73fd:#c6c5fe:#efedef:#7b7b7b:#fcb6b0:#cfffab:#ffffcc:#b5dcff:#fb9cfe:#e0e0fe:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Jackie Brown]]
     background_color = "#2c1d16"
     cursor_bg_color = "#23ff18"
@@ -1069,7 +1068,7 @@
     palette = "#2c1d16:#ef5734:#2baf2b:#bebf00:#246eb2:#d05ec1:#00acee:#bfbfbf:#666666:#e50000:#86a93e:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Juicy]]
     background_color = "#212121"
     cursor_bg_color = "#fcfcfc"
@@ -1079,7 +1078,7 @@
     palette = "#2e3436:#ff0945:#1aff81:#fff64a:#2bf1ff:#7b68ee:#98f4ff:#d3d7cf:#555753:#ff0945:#1aff81:#fff64a:#2bf1ff:#7b68ee:#98f4ff:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Kibble]]
     background_color = "#0e100a"
     cursor_bg_color = "#9fda9c"
@@ -1089,7 +1088,7 @@
     palette = "#4d4d4d:#c70031:#29cf13:#d8e30e:#3449d1:#8400ff:#0798ab:#e2d1e3:#5a5a5a:#f01578:#6ce05c:#f3f79e:#97a4f7:#c495f0:#68f2e0:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Later This Evening]]
     background_color = "#222222"
     cursor_bg_color = "#424242"
@@ -1099,7 +1098,7 @@
     palette = "#2b2b2b:#d45a60:#afba67:#e5d289:#a0bad6:#c092d6:#91bfb7:#3c3d3d:#454747:#d3232f:#aabb39:#e5be39:#6699d6:#ab53d6:#5fc0ae:#c1c2c2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Lavandula]]
     background_color = "#050014"
     cursor_bg_color = "#8c91fa"
@@ -1109,7 +1108,7 @@
     palette = "#230046:#7d1625:#337e6f:#7f6f49:#4f4a7f:#5a3f7f:#58777f:#736e7d:#372d46:#e05167:#52e0c4:#e0c386:#8e87e0:#a776e0:#9ad4e0:#8c91fa"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[LiquidCarbon]]
     background_color = "#303030"
     cursor_bg_color = "#ffffff"
@@ -1119,7 +1118,7 @@
     palette = "#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc:#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[LiquidCarbonTransparent]]
     cursor_bg_color = "#ffffff"
     foreground_color = "#afc2c2"
@@ -1128,7 +1127,7 @@
     palette = "#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc:#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[LiquidCarbonTransparentInverse]]
     cursor_bg_color = "#ffffff"
     foreground_color = "#afc2c2"
@@ -1137,7 +1136,7 @@
     palette = "#bccccd:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#000000:#ffffff:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#000000"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Lucy]]
     background_color = "#1a1b23"
     cursor_bg_color = "#af98e6"
@@ -1147,7 +1146,7 @@
     palette = "#2e3436:#fb7da7:#76c5a4:#e8d56d:#3465a4:#af98e6:#56c9db:#d3d7cf:#555753:#fb7da7:#76c5a4:#e8d56d:#729fcf:#af98e6:#56c9db:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Man Page]]
     background_color = "#fef49c"
     cursor_bg_color = "#7f7f7f"
@@ -1157,7 +1156,7 @@
     palette = "#000000:#cc0000:#00a600:#999900:#0000b2:#b200b2:#00a6b2:#cccccc:#666666:#e50000:#00d900:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Mar]]
     background_color = "#ffffff"
     cursor_bg_color = "#23476a"
@@ -1167,7 +1166,7 @@
     palette = "#000000:#b5407b:#7bb540:#b57b40:#407bb5:#7b40b5:#40b57b:#f8f8f8:#737373:#cd73a0:#a0cd73:#cda073:#73a0cd:#a073cd:#73cda0:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Material]]
     background_color = "#eaeaea"
     cursor_bg_color = "#16afca"
@@ -1177,7 +1176,7 @@
     palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Material colors]]
     background_color = "#1E282C"
     cursor_bg_color = "#657B83"
@@ -1187,7 +1186,7 @@
     palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Material-Ocean]]
     background_color = "#0f111a"
     cursor_bg_color = "#ffcc00"
@@ -1197,7 +1196,7 @@
     palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Material-Palenight]]
     background_color = "#292d3e"
     cursor_bg_color = "#ffcc00"
@@ -1207,7 +1206,7 @@
     palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[MaterialDark]]
     background_color = "#232322"
     cursor_bg_color = "#16afca"
@@ -1217,7 +1216,7 @@
     palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Mathias]]
     cursor_bg_color = "#bbbbbb"
     foreground_color = "#bbbbbb"
@@ -1226,7 +1225,7 @@
     palette = "#000000:#e52222:#a6e32d:#fc951e:#c48dff:#fa2573:#67d9f0:#f2f2f2:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Medallion]]
     background_color = "#1d1908"
     cursor_bg_color = "#d3ba30"
@@ -1236,7 +1235,7 @@
     palette = "#000000:#b64c00:#7c8b16:#d3bd26:#616bb0:#8c5a90:#916c25:#cac29a:#5e5219:#ff9149:#b2ca3b:#ffe54a:#acb8ff:#ffa0ff:#ffbc51:#fed698"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Misterioso]]
     background_color = "#2d3743"
     cursor_bg_color = "#000000"
@@ -1246,7 +1245,7 @@
     palette = "#000000:#ff4242:#74af68:#ffad29:#338f86:#9414e6:#23d7d7:#e1e1e0:#555555:#ff3242:#74cd68:#ffb929:#23d7d7:#ff37ff:#00ede1:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Miu]]
     background_color = "#0d1926"
     cursor_bg_color = "#d7dee4"
@@ -1256,7 +1255,7 @@
     palette = "#000000:#b87a7a:#7ab87a:#b8b87a:#7a7ab8:#b87ab8:#7ab8b8:#d9d9d9:#262626:#dbbdbd:#bddbbd:#dbdbbd:#bdbddb:#dbbddb:#bddbdb:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Molokai]]
     background_color = "#121212"
     cursor_bg_color = "#bbbbbb"
@@ -1266,7 +1265,7 @@
     palette = "#121212:#fa2573:#98e123:#dfd460:#1080d0:#8700ff:#43a8d0:#bbbbbb:#555555:#f6669d:#b1e05f:#fff26d:#00afff:#af87ff:#51ceff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[MonaLisa]]
     background_color = "#120b0d"
     cursor_bg_color = "#c46c32"
@@ -1276,7 +1275,7 @@
     palette = "#351b0e:#9b291c:#636232:#c36e28:#515c5d:#9b1d29:#588056:#f7d75c:#874228:#ff4331:#b4b264:#ff9566:#9eb2b4:#ff5b6a:#8acd8f:#ffe598"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Monokai dark]]
     background_color = "#272822"
     cursor_bg_color = "#ffffff"
@@ -1286,7 +1285,7 @@
     palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#838383:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Monokai Soda]]
     background_color = "#1a1a1a"
     cursor_bg_color = "#f6f7ec"
@@ -1296,7 +1295,7 @@
     palette = "#1a1a1a:#f4005f:#98e024:#fa8419:#9d65ff:#f4005f:#58d1eb:#c4c5b5:#625e4c:#f4005f:#98e024:#e0d561:#9d65ff:#f4005f:#58d1eb:#f6f6ef"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Monokai Vivid]]
     background_color = "#121212"
     cursor_bg_color = "#fb0007"
@@ -1306,7 +1305,7 @@
     palette = "#121212:#fa2934:#98e123:#fff30a:#0443ff:#f800f8:#01b6ed:#ffffff:#838383:#f6669d:#b1e05f:#fff26d:#0443ff:#f200f6:#51ceff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[N0tch2k]]
     background_color = "#222222"
     cursor_bg_color = "#aa9175"
@@ -1316,7 +1315,7 @@
     palette = "#383838:#a95551:#666666:#a98051:#657d3e:#767676:#c9c9c9:#d0b8a3:#474747:#a97775:#8c8c8c:#a99175:#98bd5e:#a3a3a3:#dcdcdc:#d8c8bb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Nebula]]
     background_color = "#23262e"
     cursor_bg_color = "#00e8c6"
@@ -1326,7 +1325,7 @@
     palette = "#2e3436:#ff007a:#84ff39:#f3d56e:#7cb7ff:#c74ded:#00e8c6:#d3d7cf:#555753:#ff007a:#84ff39:#f3d56e:#7cb7ff:#c74ded:#00e8c6:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Neopolitan]]
     background_color = "#271f19"
     cursor_bg_color = "#ffffff"
@@ -1336,7 +1335,7 @@
     palette = "#000000:#800000:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8:#000000:#800000:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Neutron]]
     background_color = "#1c1e22"
     cursor_bg_color = "#f6f7ec"
@@ -1346,7 +1345,7 @@
     palette = "#23252b:#b54036:#5ab977:#deb566:#6a7c93:#a4799d:#3f94a8:#e6e8ef:#23252b:#b54036:#5ab977:#deb566:#6a7c93:#a4799d:#3f94a8:#ebedf2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Night Owl]]
     background_color = "#011627"
     cursor_bg_color = "#80a4c2"
@@ -1356,7 +1355,7 @@
     palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[NightLion v1]]
     cursor_bg_color = "#bbbbbb"
     foreground_color = "#bbbbbb"
@@ -1365,7 +1364,7 @@
     palette = "#4c4c4c:#bb0000:#5fde8f:#f3f167:#276bd8:#bb00bb:#00dadf:#bbbbbb:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[NightLion v2]]
     background_color = "#171717"
     cursor_bg_color = "#bbbbbb"
@@ -1375,7 +1374,7 @@
     palette = "#4c4c4c:#bb0000:#04f623:#f3f167:#64d0f0:#ce6fdb:#00dadf:#bbbbbb:#555555:#ff5555:#7df71d:#ffff55:#62cbe8:#ff9bf5:#00ccd8:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Nord]]
     background_color = "#2E3440"
     cursor_bg_color = "#D8DEE9"
@@ -1385,7 +1384,7 @@
     palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[nord-light]]
     background_color = "#e5e9f0"
     cursor_bg_color = "#88c0d0"
@@ -1395,7 +1394,7 @@
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#d8dee9:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Novel]]
     background_color = "#dfdbc3"
     cursor_bg_color = "#73635a"
@@ -1405,7 +1404,7 @@
     palette = "#000000:#cc0000:#009600:#d06b00:#0000cc:#cc00cc:#0087cc:#cccccc:#808080:#cc0000:#009600:#d06b00:#0000cc:#cc00cc:#0087cc:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Obsidian]]
     background_color = "#283033"
     cursor_bg_color = "#c0cad0"
@@ -1415,7 +1414,7 @@
     palette = "#000000:#a60001:#00bb00:#fecd22:#3a9bdb:#bb00bb:#00bbbb:#bbbbbb:#555555:#ff0003:#93c863:#fef874:#a1d7ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ocean]]
     background_color = "#224fbc"
     cursor_bg_color = "#7f7f7f"
@@ -1425,7 +1424,7 @@
     palette = "#000000:#990000:#00a600:#999900:#0000b2:#b200b2:#00a6b2:#bfbfbf:#666666:#e50000:#00d900:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ocean dark]]
     background_color = "#1c1f27"
     cursor_bg_color = "#a0a4b2"
@@ -1435,7 +1434,7 @@
     palette = "#4F4F4F:#AF4B57:#AFD383:#E5C079:#7D90A4:#A4799D:#85A6A5:#EEEDEE:#7B7B7B:#AF4B57:#CEFFAB:#FFFECC:#B5DCFE:#FB9BFE:#DFDFFD:#FEFFFE"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[OceanicMaterial]]
     background_color = "#1c262b"
     cursor_bg_color = "#b3b8c3"
@@ -1445,7 +1444,7 @@
     palette = "#000000:#ee2b2a:#40a33f:#ffea2e:#1e80f0:#8800a0:#16afca:#a4a4a4:#777777:#dc5c60:#70be71:#fff163:#54a4f3:#aa4dbc:#42c7da:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ollie]]
     background_color = "#222125"
     cursor_bg_color = "#5b6ea7"
@@ -1455,7 +1454,7 @@
     palette = "#000000:#ac2e31:#31ac61:#ac4300:#2d57ac:#b08528:#1fa6ac:#8a8eac:#5b3725:#ff3d48:#3bff99:#ff5e1e:#4488ff:#ffc21d:#1ffaff:#5b6ea7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[omni]]
     background_color = "#191622"
     cursor_bg_color = "#aaaaaa"
@@ -1465,7 +1464,7 @@
     palette = "#191622:#e96379:#67e480:#e7de79:#78d1e1:#ff79c6:#988bc7:#abb2bf:#7a7a7a:#e96379:#67e480:#e7de79:#78d1e1:#ff79c6:#988bc7:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[One dark]]
     background_color = "#1e2127"
     cursor_bg_color = "#676c76"
@@ -1475,7 +1474,7 @@
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[OneHalfLight]]
     background_color = "#fafafa"
     cursor_bg_color = "#bfceff"
@@ -1485,7 +1484,7 @@
     palette = "#383a42:#e45649:#50a14f:#c18401:#0184bc:#a626a4:#0997b3:#fafafa:#4f525e:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[OneHalfDark]]
     background_color = "#282c34"
     cursor_bg_color = "#a3b3cc"
@@ -1495,7 +1494,7 @@
     palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Pali]]
     background_color = "#232e37"
     cursor_bg_color = "#e3ecf5"
@@ -1505,7 +1504,7 @@
     palette = "#0a0a0a:#ab8f74:#74ab8f:#8fab74:#8f74ab:#ab748f:#748fab:#f2f2f2:#5d5d5d:#ff1d62:#9cc3af:#ffd00a:#af9cc3:#ff1d62:#4bb8fd:#a020f0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Panda]]
     background_color = "#292a2b"
     cursor_bg_color = "#f0eeee"
@@ -1515,7 +1514,7 @@
     palette = "#676b79:#ff2c6d:#19f9d8:#ffb86c:#45a9f9:#b084eb:#6fc1ff:#d3d7cf:#676b79:#ff9ac1:#19f9d8:#ffcc95:#45a9f9:#b084eb:#6fc1ff:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Pandora]]
     background_color = "#141e43"
     cursor_bg_color = "#43d58e"
@@ -1525,7 +1524,7 @@
     palette = "#000000:#ff4242:#74af68:#ffad29:#338f86:#9414e6:#23d7d7:#e2e2e2:#3f5648:#ff3242:#74cd68:#ffb929:#23d7d7:#ff37ff:#00ede1:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Paraiso Dark]]
     background_color = "#2f1e2e"
     cursor_bg_color = "#a39e9b"
@@ -1535,7 +1534,7 @@
     palette = "#2f1e2e:#ef6155:#48b685:#fec418:#06b6ef:#815ba4:#5bc4bf:#a39e9b:#776e71:#ef6155:#48b685:#fec418:#06b6ef:#815ba4:#5bc4bf:#e7e9db"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Parasio Dark]]
     background_color = "#2f1e2e"
     cursor_bg_color = "#a39e9b"
@@ -1545,7 +1544,7 @@
     palette = "#2f1e2e:#ef6155:#48b685:#fec418:#06b6ef:#815ba4:#5bc4bf:#a39e9b:#776e71:#ef6155:#48b685:#fec418:#06b6ef:#815ba4:#5bc4bf:#e7e9db"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[PaulMillr]]
     cursor_bg_color = "#4d4d4d"
     foreground_color = "#f2f2f2"
@@ -1554,7 +1553,7 @@
     palette = "#2a2a2a:#ff0000:#79ff0f:#e7bf00:#396bd7:#b449be:#66ccff:#bbbbbb:#666666:#ff0080:#66ff66:#f3d64e:#709aed:#db67e6:#7adff2:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[PencilDark]]
     background_color = "#212121"
     cursor_bg_color = "#20bbfc"
@@ -1564,7 +1563,7 @@
     palette = "#212121:#c30771:#10a778:#a89c14:#008ec4:#523c79:#20a5ba:#d9d9d9:#424242:#fb007a:#5fd7af:#f3e430:#20bbfc:#6855de:#4fb8cc:#f1f1f1"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[PencilLight]]
     background_color = "#f1f1f1"
     cursor_bg_color = "#20bbfc"
@@ -1574,7 +1573,7 @@
     palette = "#212121:#c30771:#10a778:#a89c14:#008ec4:#523c79:#20a5ba:#d9d9d9:#424242:#fb007a:#5fd7af:#f3e430:#20bbfc:#6855de:#4fb8cc:#f1f1f1"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Peppermint]]
     background_color = "#002b36"
     cursor_bg_color = "#BBBBBB"
@@ -1584,7 +1583,7 @@
     palette = "#353535:#E64569:#89D287:#DAB752:#439ECF:#D961DC:#64AAAF:#B3B3B3:#535353:#E4859A:#A2CCA1:#E1E387:#6FBBE2:#E586E7:#96DCDA:#DEDEDE"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Piatto Light]]
     background_color = "#ffffff"
     cursor_bg_color = "#5e77c8"
@@ -1594,7 +1593,7 @@
     palette = "#414141:#b23771:#66781e:#cd6f34:#3c5ea8:#a454b2:#66781e:#ffffff:#3f3f3f:#db3365:#829429:#cd6f34:#3c5ea8:#a454b2:#829429:#f2f2f2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Pnevma]]
     background_color = "#1c1c1c"
     cursor_bg_color = "#e4c9af"
@@ -1604,7 +1603,7 @@
     palette = "#2f2e2d:#a36666:#90a57d:#d7af87:#7fa5bd:#c79ec4:#8adbb4:#d0d0d0:#4a4845:#d78787:#afbea2:#e4c9af:#a1bdce:#d7beda:#b1e7dd:#efefef"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Pro]]
     cursor_bg_color = "#4d4d4d"
     foreground_color = "#f2f2f2"
@@ -1613,7 +1612,7 @@
     palette = "#000000:#990000:#00a600:#999900:#2009db:#b200b2:#00a6b2:#bfbfbf:#666666:#e50000:#00d900:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Red Alert]]
     background_color = "#762423"
     cursor_bg_color = "#ffffff"
@@ -1623,7 +1622,7 @@
     palette = "#000000:#d62e4e:#71be6b:#beb86b:#489bee:#e979d7:#6bbeb8:#d6d6d6:#262626:#e02553:#aff08c:#dfddb7:#65aaf1:#ddb7df:#b7dfdd:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Red Planet]]
     background_color = "#222222"
     cursor_bg_color = "#c2b790"
@@ -1633,7 +1632,7 @@
     palette = "#202020:#8c3432:#728271:#e8bf6a:#69819e:#896492:#5b8390:#b9aa99:#676767:#b55242:#869985:#ebeb91:#60827e:#de4974:#38add8:#d6bfb8"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Red Sands]]
     background_color = "#7a251e"
     cursor_bg_color = "#ffffff"
@@ -1643,7 +1642,7 @@
     palette = "#000000:#ff3f00:#00bb00:#e7b000:#0072ff:#bb00bb:#00bbbb:#bbbbbb:#555555:#bb0000:#00bb00:#e7b000:#0072ae:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Relaxed]]
     background_color = "#353a44"
     cursor_bg_color = "#d9d9d9"
@@ -1653,7 +1652,7 @@
     palette = "#151515:#bc5653:#909d63:#ebc17a:#6a8799:#b06698:#c9dfff:#d9d9d9:#636363:#bc5653:#a0ac77:#ebc17a:#7eaac7:#b06698:#acbbd0:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Retro]]
     cursor_bg_color = "#13a10e"
     foreground_color = "#13a10e"
@@ -1662,7 +1661,7 @@
     palette = "#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Rippedcasts]]
     background_color = "#2b2b2b"
     cursor_bg_color = "#7f7f7f"
@@ -1672,7 +1671,7 @@
     palette = "#000000:#cdaf95:#a8ff60:#bfbb1f:#75a5b0:#ff73fd:#5a647e:#bfbfbf:#666666:#eecbad:#bcee68:#e5e500:#86bdc9:#e500e5:#8c9bc4:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Rose Pine]]
     background_color = "#191724"
     cursor_bg_color = "#9ccfd8"
@@ -1682,7 +1681,7 @@
     palette = "#26233A:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#d3d7cf:#26233a:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[rose-pine-dawn]]
     background_color = "#faf4ed"
     cursor_bg_color = "#575279"
@@ -1692,7 +1691,7 @@
     palette = "#f2e9e1:#b4637a:#56949f:#ea9d34:#286983:#907aa9:#d7827e:#575279:#9893a5:#b4637a:#56949f:#ea9d34:#286983:#907aa9:#d7827e:#575279"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[rose-pine-moon]]
     background_color = "#232136"
     cursor_bg_color = "#e0def4"
@@ -1702,7 +1701,7 @@
     palette = "#393552:#eb6f92:#9ccfd8:#f6c177:#3e8fb0:#c4a7e7:#ea9a97:#e0def4:#6e6a86:#eb6f92:#9ccfd8:#f6c177:#3e8fb0:#c4a7e7:#ea9a97:#e0def4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Royal]]
     background_color = "#100815"
     cursor_bg_color = "#524966"
@@ -1712,7 +1711,7 @@
     palette = "#241f2b:#91284c:#23801c:#b49d27:#6580b0:#674d96:#8aaabe:#524966:#312d3d:#d5356c:#2cd946:#fde83b:#90baf9:#a479e3:#acd4eb:#9e8cbd"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ryuuko]]
     background_color = "#2c3941"
     cursor_bg_color = "#ececec"
@@ -1722,7 +1721,7 @@
     palette = "#2c3941:#865f5b:#66907d:#b1a990:#6a8e95:#b18a73:#88b2ac:#ececec:#5d7079:#865f5b:#66907d:#b1a990:#6a8e95:#b18a73:#88b2ac:#ececec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Seafoam Pastel]]
     background_color = "#243435"
     cursor_bg_color = "#57647a"
@@ -1732,7 +1731,7 @@
     palette = "#757575:#825d4d:#728c62:#ada16d:#4d7b82:#8a7267:#729494:#e0e0e0:#8a8a8a:#cf937a:#98d9aa:#fae79d:#7ac3cf:#d6b2a1:#ade0e0:#e0e0e0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SeaShells]]
     background_color = "#09141b"
     cursor_bg_color = "#fca02f"
@@ -1742,7 +1741,7 @@
     palette = "#17384c:#d15123:#027c9b:#fca02f:#1e4950:#68d4f1:#50a3b5:#deb88d:#434b53:#d48678:#628d98:#fdd39f:#1bbcdd:#bbe3ee:#87acb4:#fee4ce"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Seti]]
     background_color = "#111213"
     cursor_bg_color = "#e3bf21"
@@ -1752,7 +1751,7 @@
     palette = "#323232:#c22832:#8ec43d:#e0c64f:#43a5d5:#8b57b5:#8ec43d:#eeeeee:#323232:#c22832:#8ec43d:#e0c64f:#43a5d5:#8b57b5:#8ec43d:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Shades-of-purple]]
     background_color = "#341d57"
     cursor_bg_color = "#f7dd00"
@@ -1762,7 +1761,7 @@
     palette = "#000000:#f90029:#00ef00:#f7dd00:#9500ff:#ff006c:#5fffff:#ffffff:#5c5c61:#ec3a37:#3ad900:#fadd00:#6943ff:#fb94ff:#80fcff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Shaman]]
     background_color = "#001015"
     cursor_bg_color = "#4afcd6"
@@ -1772,7 +1771,7 @@
     palette = "#012026:#b2302d:#00a941:#5e8baa:#449a86:#00599d:#5d7e19:#405555:#384451:#ff4242:#2aea5e:#8ed4fd:#61d5ba:#1298ff:#98d028:#58fbd6"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Shel]]
     background_color = "#2a201f"
     cursor_bg_color = "#6192d2"
@@ -1782,7 +1781,7 @@
     palette = "#2c2423:#ab2463:#6ca323:#ab6423:#2c64a2:#6c24a2:#2ca363:#918988:#918988:#f588b9:#c2ee86:#f5ba86:#8fbaec:#c288ec:#8feeb9:#f5eeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Sick]]
     background_color = "#272935"
     cursor_bg_color = "#aaaaaa"
@@ -1792,7 +1791,7 @@
     palette = "#2e3436:#f47375:#6bf1be:#e5f081:#6aa1fd:#c481ff:#6de4fd:#d3d7cf:#555753:#f47375:#6bf1be:#e5f081:#6aa1fd:#c481ff:#6de4fd:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Slate]]
     background_color = "#222222"
     cursor_bg_color = "#87d3c4"
@@ -1802,7 +1801,7 @@
     palette = "#222222:#e2a8bf:#81d778:#c4c9c0:#264b49:#a481d3:#15ab9c:#02c5e0:#ffffff:#ffcdd9:#beffa8:#d0ccca:#7ab0d2:#c5a7d9:#8cdfe0:#e0e0e0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Smyck]]
     background_color = "#1b1b1b"
     cursor_bg_color = "#bbbbbb"
@@ -1812,7 +1811,7 @@
     palette = "#000000:#b84131:#7da900:#c4a500:#62a3c4:#ba8acc:#207383:#a1a1a1:#7a7a7a:#d6837c:#c4f137:#fee14d:#8dcff0:#f79aff:#6ad9cf:#f7f7f7"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Snazzy]]
     background_color = "#242424"
     cursor_bg_color = "#97979b"
@@ -1822,7 +1821,7 @@
     palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SoftServer]]
     background_color = "#242626"
     cursor_bg_color = "#d2e0de"
@@ -1832,7 +1831,7 @@
     palette = "#000000:#a2686a:#9aa56a:#a3906a:#6b8fa3:#6a71a3:#6ba58f:#99a3a2:#666c6c:#dd5c60:#bfdf55:#deb360:#62b1df:#606edf:#64e39c:#d2e0de"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Solarized Darcula]]
     background_color = "#3d3f41"
     cursor_bg_color = "#708284"
@@ -1842,7 +1841,7 @@
     palette = "#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9:#25292a:#f24840:#629655:#b68800:#2075c7:#797fd4:#15968d:#d2d8d9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Solarized Dark]]
     background_color = "#002b36"
     cursor_bg_color = "#eee8d5"
@@ -1852,7 +1851,7 @@
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Solarized Dark - Patched]]
     background_color = "#001e27"
     cursor_bg_color = "#708284"
@@ -1862,7 +1861,7 @@
     palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#475b62:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Solarized Dark Higher Contrast]]
     background_color = "#001e27"
     cursor_bg_color = "#f34b00"
@@ -1872,7 +1871,7 @@
     palette = "#002831:#d11c24:#6cbe6c:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#006488:#f5163b:#51ef84:#b27e28:#178ec8:#e24d8e:#00b39e:#fcf4dc"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Solarized Light]]
     background_color = "#eee8d5"
     cursor_bg_color = "#002b36"
@@ -1882,7 +1881,7 @@
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Spacedust]]
     background_color = "#0a1e24"
     cursor_bg_color = "#708284"
@@ -1892,7 +1891,7 @@
     palette = "#6e5346:#e35b00:#5cab96:#e3cd7b:#0f548b:#e35b00:#06afc7:#f0f1ce:#684c31:#ff8a3a:#aecab8:#ffc878:#67a0ce:#ff8a3a:#83a7b4:#fefff1"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SpaceGray]]
     background_color = "#20242d"
     cursor_bg_color = "#b3b8c3"
@@ -1902,7 +1901,7 @@
     palette = "#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#b3b8c3:#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SpaceGray Eighties]]
     background_color = "#222222"
     cursor_bg_color = "#bbbbbb"
@@ -1912,7 +1911,7 @@
     palette = "#15171c:#ec5f67:#81a764:#fec254:#5486c0:#bf83c1:#57c2c1:#efece7:#555555:#ff6973:#93d493:#ffd256:#4d84d1:#ff55ff:#83e9e4:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SpaceGray Eighties Dull]]
     background_color = "#222222"
     cursor_bg_color = "#bbbbbb"
@@ -1922,7 +1921,7 @@
     palette = "#15171c:#b24a56:#92b477:#c6735a:#7c8fa5:#a5789e:#80cdcb:#b3b8c3:#555555:#ec5f67:#89e986:#fec254:#5486c0:#bf83c1:#58c2c1:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Spiderman]]
     background_color = "#1b1d1e"
     cursor_bg_color = "#2c3fff"
@@ -1932,7 +1931,7 @@
     palette = "#1b1d1e:#e60813:#e22928:#e24756:#2c3fff:#2435db:#3256ff:#fffef6:#505354:#ff0325:#ff3338:#fe3a35:#1d50ff:#747cff:#6184ff:#fffff9"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Spring]]
     background_color = "#ffffff"
     cursor_bg_color = "#4d4d4c"
@@ -1942,7 +1941,7 @@
     palette = "#000000:#ff4d83:#1f8c3b:#1fc95b:#1dd3ee:#8959a8:#3e999f:#ffffff:#000000:#ff0021:#1fc231:#d5b807:#15a9fd:#8959a8:#3e999f:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Square]]
     background_color = "#1a1a1a"
     cursor_bg_color = "#fcfbcc"
@@ -1952,7 +1951,7 @@
     palette = "#050505:#e9897c:#b6377d:#ecebbe:#a9cdeb:#75507b:#c9caec:#f2f2f2:#141414:#f99286:#c3f786:#fcfbcc:#b6defb:#ad7fa8:#d7d9fc:#e2e2e2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Sundried]]
     background_color = "#1a1818"
     cursor_bg_color = "#ffffff"
@@ -1962,7 +1961,7 @@
     palette = "#302b2a:#a7463d:#587744:#9d602a:#485b98:#864651:#9c814f:#c9c9c9:#4d4e48:#aa000c:#128c21:#fc6a21:#7999f7:#fd8aa1:#fad484:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Sweet-Mars]]
     background_color = "#1a1e21"
     cursor_bg_color = "#e1dd8f"
@@ -1972,7 +1971,7 @@
     palette = "#2e3436:#f67e7d:#cae7b9:#e1dd8f:#729fcf:#d7bcc8:#a0c1b9:#d3d7cf:#555753:#f67e7d:#cae7b9:#e1dd8f:#729fcf:#d7bcc8:#a0c1b9:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Symfonic]]
     cursor_bg_color = "#dc322f"
     foreground_color = "#ffffff"
@@ -1981,7 +1980,7 @@
     palette = "#000000:#dc322f:#56db3a:#ff8400:#0084d4:#b729d9:#ccccff:#ffffff:#1b1d21:#dc322f:#56db3a:#ff8400:#0084d4:#b729d9:#ccccff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[synthwave]]
     cursor_bg_color = "#19cde6"
     foreground_color = "#dad9c7"
@@ -1990,7 +1989,7 @@
     palette = "#000000:#f6188f:#1ebb2b:#fdf834:#2186ec:#f85a21:#12c3e2:#ffffff:#000000:#f841a0:#25c141:#fdf454:#2f9ded:#f97137:#19cde6:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[synthwave-everything]]
     background_color = "#2a2139"
     cursor_bg_color = "#72f1b8"
@@ -2000,7 +1999,7 @@
     palette = "#fefefe:#f97e72:#72f1b8:#fede5d:#6d77b3:#c792ea:#f772e0:#fefefe:#fefefe:#f88414:#72f1b8:#fff951:#36f9f6:#e1acff:#f92aad:#fefefe"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[SynthwaveAlpha]]
     background_color = "#241b30"
     cursor_bg_color = "#f2f2e3"
@@ -2010,7 +2009,7 @@
     palette = "#241b30:#e60a70:#00986c:#adad3e:#6e29ad:#b300ad:#00b0b1:#b9b1bc:#7f7094:#e60a70:#0ae4a4:#f9f972:#aa54f9:#ff00f6:#00fbfd:#f2f2e3"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Teerb]]
     background_color = "#262626"
     cursor_bg_color = "#e4c9af"
@@ -2020,7 +2019,7 @@
     palette = "#1c1c1c:#d68686:#aed686:#d7af87:#86aed6:#d6aed6:#8adbb4:#d0d0d0:#1c1c1c:#d68686:#aed686:#e4c9af:#86aed6:#d6aed6:#b1e7dd:#efefef"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Terminal Basic]]
     background_color = "#ffffff"
     cursor_bg_color = "#7f7f7f"
@@ -2030,7 +2029,7 @@
     palette = "#000000:#990000:#00a600:#999900:#0000b2:#b200b2:#00a6b2:#bfbfbf:#666666:#e50000:#00d900:#e5e500:#0000ff:#e500e5:#00e5e5:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Thayer Bright]]
     background_color = "#1b1d1e"
     cursor_bg_color = "#fc971f"
@@ -2040,7 +2039,7 @@
     palette = "#1b1d1e:#f92672:#4df840:#f4fd22:#2757d6:#8c54fe:#38c8b5:#ccccc6:#505354:#ff5995:#b6e354:#feed6c:#3f78ff:#9e6ffe:#23cfd5:#f8f8f2"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[The Hulk]]
     background_color = "#1b1d1e"
     cursor_bg_color = "#16b61b"
@@ -2050,7 +2049,7 @@
     palette = "#1b1d1e:#269d1b:#13ce30:#63e457:#2525f5:#641f74:#378ca9:#d9d8d1:#505354:#8dff2a:#48ff77:#3afe16:#506b95:#72589d:#4085a6:#e5e6e1"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[tokyonight]]
     background_color = "#1a1b26"
     cursor_bg_color = "#c0caf5"
@@ -2060,7 +2059,7 @@
     palette = "#15161e:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[tokyonight-day]]
     background_color = "#e1e2e7"
     cursor_bg_color = "#3760bf"
@@ -2070,7 +2069,7 @@
     palette = "#e9e9ed:#f52a65:#587539:#8c6c3e:#2e7de9:#9854f1:#007197:#6172b0:#a1a6c5:#f52a65:#587539:#8c6c3e:#2e7de9:#9854f1:#007197:#3760bf"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[tokyonight-storm]]
     background_color = "#24283b"
     cursor_bg_color = "#c0caf5"
@@ -2080,7 +2079,7 @@
     palette = "#1d202f:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Tomorrow]]
     background_color = "#ffffff"
     cursor_bg_color = "#4d4d4c"
@@ -2090,7 +2089,7 @@
     palette = "#000000:#c82829:#718c00:#eab700:#4271ae:#8959a8:#3e999f:#ffffff:#000000:#c82829:#718c00:#eab700:#4271ae:#8959a8:#3e999f:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Tomorrow Night]]
     background_color = "#1d1f21"
     cursor_bg_color = "#c5c8c6"
@@ -2100,7 +2099,7 @@
     palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Tomorrow Night Blue]]
     background_color = "#002451"
     cursor_bg_color = "#ffffff"
@@ -2110,7 +2109,7 @@
     palette = "#000000:#ff9da4:#d1f1a9:#ffeead:#bbdaff:#ebbbff:#99ffff:#ffffff:#000000:#ff9da4:#d1f1a9:#ffeead:#bbdaff:#ebbbff:#99ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Tomorrow Night Bright]]
     cursor_bg_color = "#eaeaea"
     foreground_color = "#eaeaea"
@@ -2119,7 +2118,7 @@
     palette = "#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff:#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Tomorrow Night Eighties]]
     background_color = "#2d2d2d"
     cursor_bg_color = "#cccccc"
@@ -2129,7 +2128,7 @@
     palette = "#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff:#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[ToyChest]]
     background_color = "#24364b"
     cursor_bg_color = "#d5d5d5"
@@ -2139,7 +2138,7 @@
     palette = "#2c3f58:#be2d26:#1a9172:#db8e27:#325d96:#8a5edc:#35a08f:#23d183:#336889:#dd5944:#31d07b:#e7d84b:#34a6da:#ae6bdc:#42c3ae:#d5d5d5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Treehouse]]
     background_color = "#191919"
     cursor_bg_color = "#fac814"
@@ -2149,7 +2148,7 @@
     palette = "#321300:#b2270e:#44a900:#aa820c:#58859a:#97363d:#b25a1e:#786b53:#433626:#ed5d20:#55f238:#f2b732:#85cfed:#e14c5a:#f07d14:#ffc800"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Twilight]]
     background_color = "#141414"
     cursor_bg_color = "#ffffff"
@@ -2159,7 +2158,7 @@
     palette = "#141414:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#262626:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Ubuntu]]
     background_color = "#300a24"
     cursor_bg_color = "#bbbbbb"
@@ -2168,7 +2167,7 @@
     scrollback_infinite = True
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[UnderTheSea]]
     background_color = "#011116"
     cursor_bg_color = "#4afcd6"
@@ -2178,7 +2177,7 @@
     palette = "#022026:#b2302d:#00a941:#59819c:#459a86:#00599d:#5d7e19:#405555:#384451:#ff4242:#2aea5e:#8ed4fd:#61d5ba:#1298ff:#98d028:#58fbd6"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Urple]]
     background_color = "#1b1b23"
     cursor_bg_color = "#a063eb"
@@ -2188,7 +2187,7 @@
     palette = "#000000:#b0425b:#37a415:#ad5c42:#564d9b:#6c3ca1:#808080:#87799c:#5d3225:#ff6388:#29e620:#f08161:#867aed:#a05eee:#eaeaea:#bfa3ff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Vag]]
     background_color = "#191f1d"
     cursor_bg_color = "#e5f0fa"
@@ -2198,7 +2197,7 @@
     palette = "#303030:#a87139:#39a871:#71a839:#7139a8:#a83971:#3971a8:#8a8a8a:#494949:#b0763b:#3bb076:#76b03b:#763bb0:#b03b76:#3b76b0:#cfcfcf"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Vaughn]]
     background_color = "#25234f"
     cursor_bg_color = "#ff5555"
@@ -2208,7 +2207,7 @@
     palette = "#25234f:#705050:#60b48a:#dfaf8f:#5555ff:#f08cc3:#8cd0d3:#709080:#709080:#dca3a3:#60b48a:#f0dfaf:#5555ff:#ec93d3:#93e0e3:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Venom]]
     background_color = "#060d14"
     cursor_bg_color = "#9ecfa2"
@@ -2218,7 +2217,7 @@
     palette = "#2e3436:#e94759:#9ecfa2:#f3efa9:#00898d:#9c21b0:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[vesper]]
     background_color = "#101010"
     cursor_bg_color = "#acb1ab"
@@ -2228,7 +2227,7 @@
     palette = "#101010:#f5a191:#90b99f:#e6b99d:#aca1cf:#e29eca:#ea83a5:#a0a0a0:#7e7e7e:#ff8080:#99ffe4:#ffc799:#b9aeda:#ecaad6:#f591b2:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[VibrantInk]]
     cursor_bg_color = "#ffffff"
     foreground_color = "#ffffff"
@@ -2237,7 +2236,7 @@
     palette = "#878787:#ff6600:#ccff04:#ffcc00:#44b4cc:#9933cc:#44b4cc:#f5f5f5:#555555:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#e5e5e5"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Violet Dark]]
     background_color = "#1c1d1f"
     cursor_bg_color = "#708284"
@@ -2247,7 +2246,7 @@
     palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#c9c6bd:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Violet Light]]
     background_color = "#fcf4dc"
     cursor_bg_color = "#536870"
@@ -2257,7 +2256,7 @@
     palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#d3d0c9:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[WarmNeon]]
     background_color = "#404040"
     cursor_bg_color = "#30ff24"
@@ -2267,7 +2266,7 @@
     palette = "#000000:#e24346:#39b13a:#dae145:#4261c5:#f920fb:#2abbd4:#d0b8a3:#fefcfc:#e97071:#9cc090:#ddda7a:#7b91d6:#f674ba:#5ed1e5:#d8c8bb"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Wez]]
     cursor_bg_color = "#53ae71"
     foreground_color = "#b3b3b3"
@@ -2276,7 +2275,7 @@
     palette = "#000000:#cc5555:#55cc55:#cdcd55:#5555cc:#cc55cc:#7acaca:#cccccc:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[WildCherry]]
     background_color = "#1f1726"
     cursor_bg_color = "#dd00ff"
@@ -2286,7 +2285,7 @@
     palette = "#000507:#d94085:#2ab250:#ffd16f:#883cdc:#ececec:#c1b8b7:#fff8de:#009cc9:#da6bac:#f4dca5:#eac066:#308cba:#ae636b:#ff919d:#e4838d"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Wombat]]
     background_color = "#171717"
     cursor_bg_color = "#bbbbbb"
@@ -2296,7 +2295,7 @@
     palette = "#000000:#ff615a:#b1e969:#ebd99c:#5da9f6:#e86aff:#82fff7:#dedacf:#313131:#f58c80:#ddf88f:#eee5b2:#a5c7ff:#ddaaff:#b7fff9:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Wryan]]
     background_color = "#101010"
     cursor_bg_color = "#9e9ecb"
@@ -2306,7 +2305,7 @@
     palette = "#333333:#8c4665:#287373:#7c7c99:#395573:#5e468c:#31658c:#899ca1:#3d3d3d:#bf4d80:#53a6a6:#9e9ecb:#477ab3:#7e62b3:#6096bf:#c0c0c0"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Zenburn]]
     background_color = "#3f3f3f"
     cursor_bg_color = "#73635a"
@@ -2316,7 +2315,7 @@
     palette = "#4d4d4d:#705050:#60b48a:#f0dfaf:#506070:#dc8cc3:#8cd0d3:#dcdccc:#709080:#dca3a3:#c3bf9f:#e0cf9f:#94bff3:#ec93d3:#93e0e3:#ffffff"
     login_shell = True
     use_custom_command = True
-    custom_command = /bin/zsh
+    custom_command = /usr/sbin/fish
   [[Aci]]
 [layouts]
   [[default]]

@@ -9,6 +9,7 @@ if status is-interactive
 
     set -gx PYENV_ROOT $HOME/.pyenv
     fish_add_path $PYENV_ROOT/bin
+    fish_add_path $HOME/.opencode/bin
     pyenv init - | source
 
     fzf --fish | source
@@ -17,5 +18,8 @@ if status is-interactive
 
     starship init fish | source
 
-    fastfetch
+    function fish_greeting
+        fastfetch
+    end
+
 end

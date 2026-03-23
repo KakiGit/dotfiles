@@ -2,7 +2,7 @@ export ZSH=~/.oh-my-zsh
 
 
 plugins=(
- zsh-autosuggestions git zsh-syntax-highlighting z
+ zsh-autosuggestions git zsh-syntax-highlighting
 )
 
 
@@ -67,3 +67,27 @@ POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='green'
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias nv="nvim"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Restart your shell for the changes to take effect.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init - zsh)"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export EDITOR=nvim
+
+. "$HOME/.local/share/../bin/env"
+eval "$(zoxide init zsh)"
+alias lg="lazygit"
+alias yz="yazi"
+fastfetch
