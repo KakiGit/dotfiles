@@ -2326,5 +2326,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = One dark
+      profile = IR_Black
 [plugins]
