@@ -16,6 +16,7 @@
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 10
+xwayland enable
 font pango:DejaVu Sans Mono, pango:Font Awesome 10
 
 set $mod Mod4
@@ -45,23 +46,20 @@ client.urgent            $urgent-bg-color       $urgent-bg-color       $text-col
 # screen before suspend. Use loginctl lock-session to lock your screen.
 set $lock_cmd_auto 'swaylock -f --color f59e42'
 exec swayidle -w \
-    timeout 600 $lock_cmd_auto \
-    timeout 570 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep $lock_cmd_auto
+    timeout 1800 $lock_cmd_auto
 bindsym $mod+Shift+x exec --no-startup-id swaylock --color 475263
 exec waybar
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#set $refresh_i3status pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2 # decrease screen brightness
@@ -151,10 +149,10 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 Terminal  "
-set $ws2 "2 Browser  "
-set $ws3 "3 Explorer  "
-set $ws4 "4 Message  "
+set $ws1 "1  "
+set $ws2 "2  "
+set $ws3 "3  "
+set $ws4 "4  "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -190,11 +188,11 @@ bindsym $mod+Ctrl+comma move workspace to output left
 bindsym $mod+Ctrl+period move workspace to output right
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r exec sway reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+#bindsym $mod+Shift+c sway restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec sway exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -223,6 +221,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+input "Logitech G Pro" {
+    accel_profile "flat"
+    dwt disabled
+}
+# input * {
+#     xkb_layout "fi"
+# }
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
@@ -238,9 +244,8 @@ bindsym $mod+r mode "resize"
 #         }
 # }
 
-exec --no-startup-id copyq
 bindsym Shift+Alt+v exec copyq toggle
-for_window [app_id="copyq"] floating enable, resize set 500 1000
+bindsym $mod+o exec killall -SIGUSR1 waybar
 
 # automatically start i3-config-wizard to offer the user to create a
 #######################################################################
@@ -254,7 +259,21 @@ for_window [app_id="copyq"] floating enable, resize set 500 1000
 #######################################################################
 # exec i3-config-wizard
 # exec_always --no-startup-id feh --bg-max ~/Downloads/cloud.jpg
-output "*" background "~/Downloads/boat.jpg" fill
-exec fcitx
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec /usr/lib/xdg-desktop-portal -r
+output "*" {
+    background "~/Downloads/arch.png" fill
+    adaptive_sync on
+}
+output "HDMI-A-2" {
+    mode 3840x2160@119.880Hz
+    scale 2
+    render_bit_depth 10
+    color_profile icc /home/kaki/lg_sdr.icm
+}
+for_window [title="Wargaming.net Game Center"] floating enable
+assign [title="Wargaming.net Game Center"] workspace $ws6
+exec --no-startup-id fcitx5 -d
+exec --no-startup-id sleep 5 && copyq --start-server
+# exec wl-paste --watch copyq add -
+bindsym $mod+Shift+s exec bluetoothctl connect 4C:BC:E9:AB:AC:24
+bindsym $mod+Shift+a exec slurp | grim -g - - | wl-copy && wl-paste > ~/Documents/screenshot-$(date).png
+include /etc/sway/config.d/*
