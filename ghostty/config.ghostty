@@ -1,0 +1,21 @@
+config-file = ?auto/theme.ghostty
+command = fish
+shell-integration = fish
+keybind = alt+[=goto_split:previous
+keybind = alt+]=goto_split:next
+keybind = alt+k=goto_split:up
+keybind = alt+j=goto_split:down
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+keybind = ctrl+shift+x=toggle_split_zoom
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+notify-on-command-finish-action = bell,notify
+notify-on-command-finish-after = 10s
+bell-features = system,title,attention,border
+scrollback-limit = 104857600
+# Adds 10 pixels of padding on the top and bottom
+window-padding-y = 20
+
+# Adds 10 pixels of padding on the left and right (optional, but looks better)
+window-padding-x = 10

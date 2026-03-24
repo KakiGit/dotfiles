@@ -75,7 +75,8 @@ set $right l
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec terminator
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -264,7 +265,8 @@ output "*" {
     adaptive_sync on
 }
 output "HDMI-A-2" {
-    mode 3840x2160@119.880Hz
+    mode 3840x2160@60Hz
+    # mode 3840x2160@119.880Hz
     scale 2
     render_bit_depth 10
     color_profile icc ~/lg_sdr.icm
