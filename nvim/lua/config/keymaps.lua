@@ -1,0 +1,11 @@
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>", { silent = true })
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>", { silent = true })
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>", { silent = true })
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>", { silent = true })
+
+vim.keymap.set("v", "$1", "<esc>`>a)<esc>`<i(<esc>", {})
+vim.keymap.set("v", "$2", "<esc>`>a]<esc>`<i[<esc>", {})
+vim.keymap.set("v", "$3", "<esc>`>a}<esc>`<i{<esc>", {})
+vim.keymap.set("v", "$$", '<esc>`>a"<esc>`<i"<esc>', {})
+vim.keymap.set("v", "$q", "<esc>`>a'<esc>`<i'<esc>", {})
+vim.keymap.set("v", "$e", "<esc>`>a`<esc>`<i`<esc>", {})
