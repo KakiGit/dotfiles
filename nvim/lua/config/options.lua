@@ -11,6 +11,7 @@ vim.opt.expandtab = true
 vim.cmd.colorscheme = nil
 vim.opt.termguicolors = false
 vim.cmd("set t_Co=256")
+vim.cmd("highlight CursorLine ctermbg=DarkGreen ctermfg=Black")
 
 vim.g.mapleader = ","
 
