@@ -8,6 +8,15 @@ if status is-interactive
     abbr --add gst git status
     abbr --add gcmsg git commit -m
     abbr --add gaa git add --all
+    abbr --add sb sandbox
+    function sandbox
+        set container (podman ps --filter name=sandbox_sandbox_1 --format '{{.Names}}' | head -n1)
+        if test -n "$container"
+            podman exec -ti $container fish
+        else
+            echo "container not found"
+        end
+    end
 
     fish_add_path $HOME/bin
 
