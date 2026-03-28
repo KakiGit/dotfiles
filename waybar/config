@@ -16,7 +16,7 @@
     "modules-right": [
         "network",
         "bluetooth",
-        //"battery",
+        "battery",
         // "backlight",
         "pulseaudio",
         "pulseaudio#microphone",
@@ -79,30 +79,30 @@
     //     "on-scroll-up": "brightnessctl -q set 1%+",
     //     "on-scroll-down": "brightnessctl -q set 1%-"
     // },
-    // "battery": {
-    //     "states": {
-    //         "good": 95,
-    //         "warning": 40,
-    //         "critical": 30
-    //     },
-    //     "format": "{icon} {capacity}%",
-    //     "format-charging": " {capacity}%",
-    //     "format-plugged": " {capacity}%",
-    //     "format-alt": "{time} {icon}",
-    //     "format-icons": [
-    //         "󰂎",
-    //         "󰁺",
-    //         "󰁻",
-    //         "󰁼",
-    //         "󰁽",
-    //         "󰁾",
-    //         "󰁿",
-    //         "󰂀",
-    //         "󰂁",
-    //         "󰂂",
-    //         "󰁹"
-    //     ]
-    // },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 30
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
