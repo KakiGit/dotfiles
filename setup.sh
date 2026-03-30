@@ -22,10 +22,26 @@ declare -A FEATURE_BINARIES=(
     [ghostty]="ghostty"
 )
 
+_git_clone_or_rebase() {
+    local repo_url="$1"
+    local target_dir="$2"
+    local depth="${3:-}"
+
+    if [[ -d "${target_dir}/.git" ]]; then
+        git -C "${target_dir}" pull --rebase
+    else
+        if [[ -n "$depth" ]]; then
+            git clone --depth "$depth" "$repo_url" "$target_dir"
+        else
+            git clone "$repo_url" "$target_dir"
+        fi
+    fi
+}
+
 _check_binaries() {
     local features="$1"
     local -a required=("git" "curl")
-    
+
     IFS=',' read -ra feature_array <<< "$features"
     for feature in "${feature_array[@]}"; do
         feature=$(echo "$feature" | tr -d ' ')
@@ -35,7 +51,7 @@ _check_binaries() {
             done
         fi
     done
-    
+
     for req in "${required[@]}"; do
         if ! command -v "${req}" &> /dev/null; then
             echo "${req} is not installed in your machine"
@@ -45,10 +61,10 @@ _check_binaries() {
 }
 
 _clone_dotfiles() {
-    if [[ -d "${DOTFILES_DIR}" ]]; then
-        echo "dotfiles repo already exists at ${DOTFILES_DIR}, skipping clone"
+    if [[ -d "${DOTFILES_DIR}" && ! -d "${DOTFILES_DIR}/.git" ]]; then
+        echo "dotfiles directory exists at ${DOTFILES_DIR} but is not a git repo, skipping"
     else
-        git clone "${REPO_URL}" "${DOTFILES_DIR}"
+        _git_clone_or_rebase "${REPO_URL}" "${DOTFILES_DIR}"
     fi
 }
 
@@ -69,15 +85,16 @@ _setup_starship() {
 }
 
 _setup_fzf() {
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    _git_clone_or_rebase "https://github.com/junegunn/fzf.git" ~/.fzf 1
     ${HOME}/.fzf/install --all
 }
 
 _setup_zsh() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    local zsh_custom="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"
+    _git_clone_or_rebase "https://github.com/bhilburn/powerlevel9k.git" ~/.oh-my-zsh/custom/themes/powerlevel9k
+    _git_clone_or_rebase "https://github.com/zsh-users/zsh-syntax-highlighting.git" "${zsh_custom}/plugins/zsh-syntax-highlighting"
+    _git_clone_or_rebase "https://github.com/zsh-users/zsh-autosuggestions" "${zsh_custom}/plugins/zsh-autosuggestions"
     ln -snf "${DOTFILES_DIR}/zsh/zshrc" "${HOME}/.zshrc"
 }
 
@@ -116,7 +133,7 @@ _setup_terminator() {
 _setup_i3blocks() {
     mkdir -p ~/.config/i3blocks
     ln -snf "${DOTFILES_DIR}/i3blocks/config" "${HOME}/.config/i3blocks/config"
-    git clone https://github.com/vivien/i3blocks-contrib.git ~/.config/i3blocks-contrib
+    _git_clone_or_rebase "https://github.com/vivien/i3blocks-contrib.git" ~/.config/i3blocks-contrib
 }
 
 _setup_ghostty() {
@@ -127,7 +144,7 @@ _setup_ghostty() {
 main() {
     _check_binaries "$FEATURES"
     _clone_dotfiles
-    
+
     IFS=',' read -ra feature_array <<< "$FEATURES"
     for feature in "${feature_array[@]}"; do
         feature=$(echo "$feature" | tr -d ' ')
@@ -138,7 +155,7 @@ main() {
             echo "Warning: Unknown feature '${feature}'"
         fi
     done
-    
+
     echo "Done!"
 }
 
