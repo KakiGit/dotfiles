@@ -6,9 +6,10 @@ if status is-interactive
     abbr --add lg "lazygit"
     abbr --add yz "yazi"
     abbr --add gst git status
-    abbr --add gcmsg git commit -m
+    abbr --add gcm git commit
     abbr --add gaa git add --all
     abbr --add sb sandbox
+    abbr --add gpr git pull --rebase
     function sandbox
         set container (podman ps --filter name=sandbox_sandbox_1 --format '{{.Names}}' | head -n1)
         if test -n "$container"
