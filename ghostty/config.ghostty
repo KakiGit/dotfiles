@@ -10,6 +10,7 @@ keybind = alt+l=goto_split:right
 keybind = ctrl+shift+x=toggle_split_zoom
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
+keybind = ctrl+shift+g=clear_screen
 notify-on-command-finish-action = bell,notify
 notify-on-command-finish-after = 10s
 bell-features = system,title,attention,border
