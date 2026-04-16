@@ -1,6 +1,6 @@
 if status is-interactive
     set -gx EDITOR nvim
-    set -gx nvm_default_version v25.8.2
+    set -gx nvm_default_version latest
 
     abbr --add nv "nvim"
     abbr --add lg "lazygit"
