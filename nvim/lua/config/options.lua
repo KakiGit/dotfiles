@@ -8,8 +8,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.cmd.colorscheme = nil
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
+vim.opt.background = dark
 vim.cmd("set t_Co=256")
 vim.cmd("highlight CursorLine ctermbg=DarkGreen ctermfg=Black")
 
