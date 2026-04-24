@@ -9,9 +9,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
-vim.opt.background = dark
+vim.opt.background = "dark"
 vim.cmd("set t_Co=256")
-vim.cmd("highlight CursorLine ctermbg=DarkGreen ctermfg=Black")
 
 vim.g.mapleader = ","
 

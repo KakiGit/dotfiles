@@ -1,11 +1,10 @@
 return {
-  "joshdick/onedark.vim",
-  lazy = false,
+  "navarasu/onedark.nvim",
   priority = 1000,
-  init = function()
-    vim.g.airline_theme = "onedark"
-  end,
   config = function()
-    vim.cmd.colorscheme("onedark")
+    require("onedark").setup({
+      style = "dark",
+    })
+    require("onedark").load()
   end,
 }
