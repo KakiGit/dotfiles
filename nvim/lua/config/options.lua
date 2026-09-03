@@ -14,6 +14,9 @@ vim.cmd("set t_Co=256")
 
 vim.g.mapleader = ","
 
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+vim.opt.undofile = true
+
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     command = "%s/\\s\\+$//e",

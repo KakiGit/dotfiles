@@ -21,9 +21,11 @@ if status is-interactive
 
     fish_add_path $HOME/bin
 
+    set -gx OPENCODE_EXPERIMENTAL_LSP_TY true
     set -gx PYENV_ROOT $HOME/.pyenv
     fish_add_path $PYENV_ROOT/bin
     fish_add_path $HOME/.opencode/bin
+    fish_add_path $HOME/.bun/bin
     pyenv init - | source
 
     fzf --fish | source
@@ -37,5 +39,6 @@ if status is-interactive
     function fish_greeting
         fastfetch
     end
+    nvm use latest
 
 end
