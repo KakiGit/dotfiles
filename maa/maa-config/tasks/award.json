@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "type": "Award",
+      "name": "Claims",
+      "params": {
+        "award": true,
+        "mail": false,
+        "recruit": true,
+        "orundum": true,
+        "mining": true,
+        "specialaccess": false
+      }
+    }
+  ]
+}

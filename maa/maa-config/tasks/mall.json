@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    {
+      "type": "Mall",
+      "name": "Credit shop",
+      "params": {
+        "shopping": true,
+        "visit_friends": true,
+        "buy_first": ["招聘许可"],
+        "blacklist": ["碳", "家具", "加急许可"],
+        "credit_fight": false
+      }
+    }
+  ]
+}

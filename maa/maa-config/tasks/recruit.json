@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {
+      "type": "Recruit",
+      "name": "Recruit daily",
+      "params": {
+        "refresh": true,
+        "select": [4],
+        "confirm": [3, 4],
+        "times": 4,
+        "expedite": false,
+        "extra_tags_mode": 0,
+        "server": "CN"
+      }
+    }
+  ]
+}

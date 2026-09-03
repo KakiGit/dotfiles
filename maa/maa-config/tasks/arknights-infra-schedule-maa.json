@@ -1,0 +1,62 @@
+{
+  "tasks": [
+    {
+      "type": "Infrast",
+      "name": "Custom base shift",
+      "params": {
+        "mode": 10000,
+        "facility": [
+          "Mfg",
+          "Trade",
+          "Power",
+          "Control",
+          "Reception",
+          "Office",
+          "Dorm",
+          "Processing"
+        ],
+        "filename": "arknights-infra-schedule-maa.json"
+      },
+      "variants": [
+        {
+          "condition": {
+            "type": "Or",
+            "conditions": [
+              {
+                "type": "Time",
+                "start": "20:00:00"
+              },
+              {
+                "type": "Time",
+                "end": "08:00:00"
+              }
+            ]
+          },
+          "params": {
+            "plan_index": 0
+          }
+        },
+        {
+          "condition": {
+            "type": "Time",
+            "start": "08:00:00",
+            "end": "14:00:00"
+          },
+          "params": {
+            "plan_index": 1
+          }
+        },
+        {
+          "condition": {
+            "type": "Time",
+            "start": "14:00:00",
+            "end": "20:00:00"
+          },
+          "params": {
+            "plan_index": 2
+          }
+        }
+      ]
+    }
+  ]
+}

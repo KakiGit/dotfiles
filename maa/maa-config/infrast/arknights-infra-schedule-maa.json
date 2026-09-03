@@ -1,0 +1,605 @@
+{
+  "plans": [
+    {
+      "name": "Shift 1 · 12h · α+β",
+      "rooms": {
+        "hire": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "艾雅法拉"
+            ]
+          }
+        ],
+        "power": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "格雷伊"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "清流"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "雷蛇"
+            ]
+          }
+        ],
+        "control": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "12F",
+              "THRM-EX",
+              "临光",
+              "乌啾",
+              "诗怀雅"
+            ]
+          }
+        ],
+        "meeting": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "远山",
+              "塞雷娅"
+            ]
+          }
+        ],
+        "trading": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "古米",
+              "德克萨斯",
+              "能天使"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "月见夜",
+              "空爆",
+              "缠丸"
+            ]
+          }
+        ],
+        "dormitory": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "夜刀",
+              "玫兰莎",
+              "史都华德",
+              "杰西卡",
+              "Castle-3"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "白面鸮",
+              "罗比菈塔",
+              "杏仁",
+              "异客",
+              "Lancet-2"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "阿米娅",
+              "暗索"
+            ]
+          },
+          {
+            "skip": true,
+            "sort": false,
+            "autofill": false,
+            "operators": []
+          }
+        ],
+        "processing": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": []
+          }
+        ],
+        "manufacture": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "怒潮凛冬",
+              "白雪",
+              "酒神"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "红豆",
+              "霜叶",
+              "食铁兽"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "夜烟",
+              "斑点",
+              "砾"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "红云",
+              "蛇屠箱",
+              "黑角"
+            ]
+          }
+        ]
+      },
+      "drones": {
+        "room": "manufacture",
+        "index": 3,
+        "order": "pre",
+        "enable": true
+      },
+      "Fiammetta": {
+        "order": "pre",
+        "enable": false,
+        "target": ""
+      },
+      "description": "本班 12 小时；下次在 12 小时后执行下一计划；休息 γ 队"
+    },
+    {
+      "name": "Shift 2 · 6h · β+γ",
+      "rooms": {
+        "hire": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "艾雅法拉"
+            ]
+          }
+        ],
+        "power": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "异客"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "清流"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "格劳克斯"
+            ]
+          }
+        ],
+        "control": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "Lancet-2",
+              "THRM-EX",
+              "乌啾",
+              "休谟斯",
+              "诗怀雅"
+            ]
+          }
+        ],
+        "meeting": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "暗索",
+              "芙兰卡"
+            ]
+          }
+        ],
+        "trading": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "夜刀",
+              "玫兰莎",
+              "远山"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "月见夜",
+              "空爆",
+              "缠丸"
+            ]
+          }
+        ],
+        "dormitory": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "古米",
+              "德克萨斯",
+              "能天使",
+              "怒潮凛冬",
+              "白雪"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "酒神",
+              "夜烟",
+              "斑点",
+              "砾",
+              "格雷伊"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "雷蛇",
+              "12F",
+              "临光",
+              "塞雷娅"
+            ]
+          },
+          {
+            "skip": true,
+            "sort": false,
+            "autofill": false,
+            "operators": []
+          }
+        ],
+        "processing": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": []
+          }
+        ],
+        "manufacture": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "铅踝",
+              "史都华德",
+              "Castle-3"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "红豆",
+              "霜叶",
+              "食铁兽"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "杰西卡",
+              "白面鸮",
+              "杏仁"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "红云",
+              "蛇屠箱",
+              "黑角"
+            ]
+          }
+        ]
+      },
+      "drones": {
+        "room": "manufacture",
+        "index": 3,
+        "order": "pre",
+        "enable": true
+      },
+      "Fiammetta": {
+        "order": "pre",
+        "enable": false,
+        "target": ""
+      },
+      "description": "本班 6 小时；下次在 6 小时后执行下一计划；休息 α 队"
+    },
+    {
+      "name": "Shift 3 · 6h · γ+α",
+      "rooms": {
+        "hire": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "艾雅法拉"
+            ]
+          }
+        ],
+        "power": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "格雷伊"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "异客"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "雷蛇"
+            ]
+          }
+        ],
+        "control": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "12F",
+              "Lancet-2",
+              "THRM-EX",
+              "临光",
+              "阿米娅"
+            ]
+          }
+        ],
+        "meeting": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "塞雷娅",
+              "暗索"
+            ]
+          }
+        ],
+        "trading": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "古米",
+              "德克萨斯",
+              "能天使"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "LMD",
+            "autofill": false,
+            "operators": [
+              "夜刀",
+              "玫兰莎",
+              "远山"
+            ]
+          }
+        ],
+        "dormitory": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "月见夜",
+              "空爆",
+              "缠丸",
+              "红豆",
+              "霜叶"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "食铁兽",
+              "红云",
+              "蛇屠箱",
+              "黑角",
+              "清流"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "铅踝",
+              "格劳克斯",
+              "乌啾",
+              "休谟斯",
+              "诗怀雅"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": [
+              "芙兰卡"
+            ]
+          }
+        ],
+        "processing": [
+          {
+            "skip": false,
+            "sort": false,
+            "autofill": false,
+            "operators": []
+          }
+        ],
+        "manufacture": [
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "怒潮凛冬",
+              "白雪",
+              "酒神"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Battle Record",
+            "autofill": false,
+            "operators": [
+              "史都华德",
+              "杰西卡",
+              "Castle-3"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "夜烟",
+              "斑点",
+              "砾"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": false,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "白面鸮",
+              "罗比菈塔",
+              "杏仁"
+            ]
+          }
+        ]
+      },
+      "drones": {
+        "room": "manufacture",
+        "index": 3,
+        "order": "pre",
+        "enable": true
+      },
+      "Fiammetta": {
+        "order": "pre",
+        "enable": false,
+        "target": ""
+      },
+      "description": "本班 6 小时；下次在 6 小时后执行下一计划；休息 β 队"
+    }
+  ],
+  "title": "可露希尔基建终端 · 243",
+  "planTimes": "3班",
+  "description": "由 ArknightsInfraCalc 生成；可导入 MAA 自定义基建换班。"
+}
