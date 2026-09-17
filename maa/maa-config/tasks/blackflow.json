@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "type": "Roguelike",
+      "name": "BlackFlow exp farm",
+      "params": {
+        "theme": "BlackFlow",
+        "mode": 0,
+        "investment_enabled": true,
+        "stop_when_investment_full": true
+      }
+    }
+  ]
+}
