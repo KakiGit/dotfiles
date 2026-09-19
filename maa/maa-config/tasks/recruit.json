@@ -5,8 +5,8 @@
       "name": "Recruit daily",
       "params": {
         "refresh": true,
-        "select": [4],
-        "confirm": [3, 4],
+        "select": [1],
+        "confirm": [1],
         "times": 4,
         "expedite": false,
         "extra_tags_mode": 0,
