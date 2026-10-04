@@ -46,10 +46,10 @@
             "autofill": false,
             "operators": [
               "临光",
-              "杜宾",
-              "电弧",
-              "红",
-              "阿米娅"
+              "寒芒克洛丝",
+              "暴雨",
+              "阿米娅",
+              "Mon3tr"
             ]
           }
         ],
@@ -60,7 +60,7 @@
             "autofill": false,
             "operators": [
               "远山",
-              "暗索"
+              "12F"
             ]
           }
         ],
@@ -73,7 +73,7 @@
             "operators": [
               "古米",
               "月见夜",
-              "空爆"
+              "石英"
             ]
           },
           {
@@ -84,7 +84,7 @@
             "operators": [
               "夜刀",
               "慕斯",
-              "缠丸"
+              "空爆"
             ]
           }
         ],
@@ -92,19 +92,19 @@
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "岳羽由加莉",
-              "惊蛰",
-              "阿",
-              "安德切尔",
-              "玫兰莎"
+              "清道夫",
+              "诗怀雅",
+              "玫兰莎",
+              "缠丸"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "虎狼丸",
               "芬",
@@ -116,22 +116,21 @@
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "红云",
               "蛇屠箱",
               "豆苗",
               "雷蛇",
-              "12F"
+              "伺夜"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
-              "塞雷娅",
-              "伊桑"
+              "遥"
             ]
           }
         ],
@@ -147,34 +146,12 @@
           {
             "skip": false,
             "sort": true,
-            "product": "Pure Gold",
-            "autofill": false,
-            "operators": [
-              "清流",
-              "砾",
-              "结城理"
-            ]
-          },
-          {
-            "skip": false,
-            "sort": true,
             "product": "Battle Record",
             "autofill": false,
             "operators": [
               "Castle-3",
               "怒潮凛冬",
               "酒神"
-            ]
-          },
-          {
-            "skip": false,
-            "sort": true,
-            "product": "Pure Gold",
-            "autofill": false,
-            "operators": [
-              "夜烟",
-              "斑点",
-              "铅踝"
             ]
           },
           {
@@ -187,12 +164,34 @@
               "白雪",
               "红豆"
             ]
+          },
+          {
+            "skip": false,
+            "sort": true,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "清流",
+              "砾",
+              "结城理"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": true,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "夜烟",
+              "斑点",
+              "铅踝"
+            ]
           }
         ]
       },
       "drones": {
-        "room": "trading",
-        "index": 1,
+        "room": "manufacture",
+        "index": 3,
         "order": "pre",
         "enable": true
       },
@@ -248,11 +247,11 @@
             "sort": true,
             "autofill": false,
             "operators": [
-              "红",
+              "阿米娅",
+              "寒芒克洛丝",
               "杜宾",
               "清道夫",
-              "惊蛰",
-              "诗怀雅"
+              "电弧"
             ]
           }
         ],
@@ -262,8 +261,8 @@
             "sort": true,
             "autofill": false,
             "operators": [
-              "梅",
-              "守林人"
+              "远山",
+              "暗索"
             ]
           }
         ],
@@ -275,8 +274,8 @@
             "autofill": false,
             "operators": [
               "玫兰莎",
-              "芬",
-              "远山"
+              "缠丸",
+              "芬"
             ]
           },
           {
@@ -287,7 +286,7 @@
             "operators": [
               "夜刀",
               "慕斯",
-              "缠丸"
+              "空爆"
             ]
           }
         ],
@@ -295,11 +294,11 @@
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "临光",
-              "电弧",
-              "阿米娅",
+              "暴雨",
+              "Mon3tr",
               "古米",
               "月见夜"
             ]
@@ -307,31 +306,31 @@
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
-              "空爆",
-              "清流",
-              "砾",
-              "结城理",
-              "夜烟"
+              "石英",
+              "Castle-3",
+              "怒潮凛冬",
+              "酒神",
+              "清流"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
-              "斑点",
-              "铅踝",
+              "砾",
+              "结城理",
               "埃癸斯",
               "海霓",
-              "暗索"
+              "12F"
             ]
           },
           {
-            "skip": true,
+            "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": []
           }
         ],
@@ -347,34 +346,12 @@
           {
             "skip": false,
             "sort": true,
-            "product": "Pure Gold",
-            "autofill": false,
-            "operators": [
-              "红云",
-              "蛇屠箱",
-              "豆苗"
-            ]
-          },
-          {
-            "skip": false,
-            "sort": true,
             "product": "Battle Record",
             "autofill": false,
             "operators": [
-              "Castle-3",
-              "怒潮凛冬",
-              "酒神"
-            ]
-          },
-          {
-            "skip": false,
-            "sort": true,
-            "product": "Pure Gold",
-            "autofill": false,
-            "operators": [
               "史都华德",
-              "杰西卡",
-              "白面鸮"
+              "霜叶",
+              "食铁兽"
             ]
           },
           {
@@ -386,6 +363,28 @@
               "机械师",
               "白雪",
               "红豆"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": true,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "红云",
+              "蛇屠箱",
+              "豆苗"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": true,
+            "product": "Pure Gold",
+            "autofill": false,
+            "operators": [
+              "夜烟",
+              "斑点",
+              "铅踝"
             ]
           }
         ]
@@ -412,7 +411,7 @@
             "sort": true,
             "autofill": false,
             "operators": [
-              "伊桑"
+              "遥"
             ]
           }
         ],
@@ -449,10 +448,10 @@
             "autofill": false,
             "operators": [
               "临光",
-              "阿米娅",
-              "电弧",
-              "惊蛰",
-              "阿"
+              "Mon3tr",
+              "暴雨",
+              "清道夫",
+              "诗怀雅"
             ]
           }
         ],
@@ -462,8 +461,8 @@
             "sort": true,
             "autofill": false,
             "operators": [
-              "12F",
-              "塞雷娅"
+              "伺夜",
+              "12F"
             ]
           }
         ],
@@ -476,7 +475,7 @@
             "operators": [
               "古米",
               "月见夜",
-              "空爆"
+              "石英"
             ]
           },
           {
@@ -485,8 +484,8 @@
             "product": "LMD",
             "autofill": false,
             "operators": [
-              "安德切尔",
               "玫兰莎",
+              "缠丸",
               "芬"
             ]
           }
@@ -495,49 +494,49 @@
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "岳羽由加莉",
-              "红",
+              "阿米娅",
+              "寒芒克洛丝",
               "杜宾",
-              "清道夫",
-              "诗怀雅"
+              "电弧"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
               "虎狼丸",
-              "远山",
               "夜刀",
               "慕斯",
-              "缠丸"
+              "空爆",
+              "机械师"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "autofill": false,
+            "autofill": true,
             "operators": [
-              "Castle-3",
-              "怒潮凛冬",
-              "酒神",
-              "杰西卡",
-              "白面鸮"
-            ]
-          },
-          {
-            "skip": false,
-            "sort": true,
-            "autofill": false,
-            "operators": [
-              "机械师",
               "白雪",
               "红豆",
+              "夜烟",
+              "斑点",
+              "铅踝"
+            ]
+          },
+          {
+            "skip": false,
+            "sort": true,
+            "autofill": true,
+            "operators": [
               "格雷伊",
-              "THRM-EX"
+              "THRM-EX",
+              "远山",
+              "暗索",
+              "艾雅法拉"
             ]
           }
         ],
@@ -553,12 +552,12 @@
           {
             "skip": false,
             "sort": true,
-            "product": "Pure Gold",
+            "product": "Battle Record",
             "autofill": false,
             "operators": [
-              "清流",
-              "砾",
-              "结城理"
+              "Castle-3",
+              "怒潮凛冬",
+              "酒神"
             ]
           },
           {
@@ -578,15 +577,15 @@
             "product": "Pure Gold",
             "autofill": false,
             "operators": [
-              "夜烟",
-              "斑点",
-              "铅踝"
+              "清流",
+              "砾",
+              "结城理"
             ]
           },
           {
             "skip": false,
             "sort": true,
-            "product": "Battle Record",
+            "product": "Pure Gold",
             "autofill": false,
             "operators": [
               "红云",
@@ -597,7 +596,7 @@
         ]
       },
       "drones": {
-        "room": "manufacture",
+        "room": "trading",
         "index": 1,
         "order": "pre",
         "enable": true
