@@ -30,4 +30,6 @@ RUN chmod +x /entrypoint.fish
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 
+ENV SANDBOX_IN_CONTAINER=1
+
 CMD ["/usr/bin/catatonit", "--", "/entrypoint.fish"]

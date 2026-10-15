@@ -11,6 +11,10 @@ if status is-interactive
     abbr --add sb sandbox
     abbr --add gpr git pull --rebase
     function sandbox
+        if set -q SANDBOX_IN_CONTAINER
+            echo "sandbox: already inside a sandbox container" >&2
+            return 1
+        end
         ~/sandbox/sandbox.sh $argv
     end
 

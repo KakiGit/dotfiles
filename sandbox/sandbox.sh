@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [ -n "${SANDBOX_IN_CONTAINER:-}" ]; then
+    echo "sandbox: already inside a sandbox container; refusing to nest" >&2
+    exit 1
+fi
+
 SCRIPT_DIR="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")" && pwd)"
 export SANDBOX_SCRIPT_DIR="$SCRIPT_DIR"
 export SANDBOX_TYPE="${SANDBOX_TYPE:-archlinux}"
