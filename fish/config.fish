@@ -9,6 +9,8 @@ if status is-interactive
     abbr --add gcm git commit
     abbr --add gaa git add --all
     abbr --add sb sandbox
+    abbr --add asb "SANDBOX_TYPE=archlinux sandbox"
+    abbr --add usb "SANDBOX_TYPE=ubuntu sandbox"
     abbr --add gpr git pull --rebase
     function sandbox
         if set -q SANDBOX_IN_CONTAINER
