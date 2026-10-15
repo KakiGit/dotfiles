@@ -21,6 +21,8 @@ FPS="${REDROID_FPS:-$DEFAULT_FPS}"
 GPU="${REDROID_GPU:-}"
 GPU_NODE="${REDROID_GPU_NODE:-/dev/dri/renderD129}"
 
+LOCAL=""
+
 die() {
     echo "error: $*" >&2
     exit 1
@@ -28,7 +30,10 @@ die() {
 
 usage() {
     cat <<EOF
-Usage: redroid.sh --host <host_ssh_to> {setup|install|uninstall}
+Usage: redroid.sh [--host <host_ssh_to> | --local] {setup|install|uninstall}
+
+  --host <host>  run against a remote host over ssh
+  --local        run against this machine instead of a remote host
 
   setup      verify host prerequisites (read-only)
   install    create systemd unit and start redroid
@@ -41,9 +46,21 @@ Env overrides: REDROID_IMAGE, REDROID_NAME, REDROID_PORT, REDROID_DATA,
 EOF
 }
 
+run_user() {
+    if [[ -n "$LOCAL" ]]; then
+        bash -s -- "$@"
+    else
+        ssh -o BatchMode=yes "$HOST" bash -s -- "$@"
+    fi
+}
+
 run_root() {
     local remote_tmp="$1"
     shift
+    if [[ -n "$LOCAL" ]]; then
+        sudo bash -s -- "$@"
+        return
+    fi
     local local_tmp
     local_tmp="$(mktemp)"
     trap "rm -f '$local_tmp'" EXIT
@@ -53,7 +70,7 @@ run_root() {
 }
 
 cmd_setup() {
-    ssh -o BatchMode=yes "$HOST" bash -s <<'REMOTE'
+    run_user <<'REMOTE'
 set -euo pipefail
 rc=0
 check() {
@@ -142,12 +159,14 @@ REMOTE
 }
 
 print_usage() {
+    local tunnel=""
+    [[ -n "$LOCAL" ]] || tunnel="  ssh -L $PORT:127.0.0.1:$PORT $HOST    # keep this open
+"
     cat <<EOF
 
 redroid installed. Connect from this machine:
 
-  ssh -L $PORT:127.0.0.1:$PORT $HOST    # keep this open
-  adb connect localhost:$PORT
+$tunnel  adb connect localhost:$PORT
   adb devices
   scrcpy -s localhost:$PORT
 
@@ -159,13 +178,15 @@ main() {
     while [[ $# -gt 0 ]]; do
         case "$1" in
             --host) HOST="${2:?missing value for --host}"; shift 2 ;;
+            --local) LOCAL=1; shift ;;
             -h|--help) usage; exit 0 ;;
             *) break ;;
         esac
     done
     local action="${1:-}"
 
-    [[ -n "${HOST:-}" ]] || die "missing --host"
+    [[ -z "${HOST:-}" || -z "$LOCAL" ]] || die "--host and --local are mutually exclusive"
+    [[ -n "${HOST:-}" || -n "$LOCAL" ]] || die "missing --host (or use --local)"
     case "$action" in
         setup) cmd_setup ;;
         install) cmd_install ;;
