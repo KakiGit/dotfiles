@@ -20,6 +20,7 @@ declare -A FEATURE_BINARIES=(
     [terminator]="terminator"
     [i3blocks]="i3blocks"
     [ghostty]="ghostty"
+    [fcitx5]="fcitx5"
 )
 
 _git_clone_or_rebase() {
@@ -139,6 +140,17 @@ _setup_i3blocks() {
 _setup_ghostty() {
     mkdir -p ~/.config/ghostty
     ln -snf "${DOTFILES_DIR}/ghostty/config.ghostty" "${HOME}/.config/ghostty/config"
+}
+
+_setup_fcitx5() {
+    mkdir -p ~/.local/share/fcitx5
+    ln -snf "${DOTFILES_DIR}/fcitx5/config" "${HOME}/.config/fcitx5"
+    ln -snf "${DOTFILES_DIR}/fcitx5/rime" "${HOME}/.local/share/fcitx5/rime"
+}
+
+_setup_wechat() {
+    mkdir -p "${HOME}/.local/bin"
+    ln -snf "${DOTFILES_DIR}/wechat/wechat.sh" "${HOME}/.local/bin/wechat"
 }
 
 main() {

@@ -3,7 +3,8 @@ FROM archlinux:latest
 RUN pacman -Syu --noconfirm && \
     pacman -S --noconfirm sudo curl fish neovim \
     starship git cmake make pyenv zoxide fastfetch \
-    lazygit yazi which catatonit wl-clipboard openssh && \
+    lazygit yazi which catatonit wl-clipboard openssh \
+    vulkan-icd-loader vulkan-tools && \
     rm -rf /var/cache/pacman/pkg/*
 
 ARG USERNAME
