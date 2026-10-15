@@ -11,12 +11,7 @@ if status is-interactive
     abbr --add sb sandbox
     abbr --add gpr git pull --rebase
     function sandbox
-        set container (podman ps --filter name=sandbox_sandbox_1 --format '{{.Names}}' | head -n1)
-        if test -n "$container"
-            podman exec -ti $container fish
-        else
-            echo "container not found"
-        end
+        ~/sandbox/sandbox.sh $argv
     end
 
     fish_add_path $HOME/bin

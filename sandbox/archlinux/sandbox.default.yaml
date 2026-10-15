@@ -1,0 +1,7 @@
+# archlinux-specific overrides, deep-merged over ../../sandbox.default.yaml.
+# The shared defaults already fit archlinux, so no overrides are needed here.
+# Example:
+#   feature_sets:
+#     gpu:
+#       devices: ["nvidia.com/gpu=all"]
+{}

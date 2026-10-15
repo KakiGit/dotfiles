@@ -21,6 +21,7 @@ declare -A FEATURE_BINARIES=(
     [i3blocks]="i3blocks"
     [ghostty]="ghostty"
     [fcitx5]="fcitx5"
+    [sandbox]="python3"
 )
 
 _git_clone_or_rebase() {
@@ -151,6 +152,11 @@ _setup_fcitx5() {
 _setup_wechat() {
     mkdir -p "${HOME}/.local/bin"
     ln -snf "${DOTFILES_DIR}/wechat/wechat.sh" "${HOME}/.local/bin/wechat"
+}
+
+_setup_sandbox() {
+    chmod +x "${DOTFILES_DIR}/sandbox/sandbox.sh" "${DOTFILES_DIR}/sandbox/sandbox.py"
+    ln -sfn "${DOTFILES_DIR}/sandbox" "${HOME}/sandbox"
 }
 
 main() {

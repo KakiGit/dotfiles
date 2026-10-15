@@ -1,1 +1,6 @@
 lazy-lock.json
+
+sandbox/.venv/
+sandbox/*/sandbox.yaml
+sandbox/*/docker-compose.yml
+sandbox/*/sandbox_home/

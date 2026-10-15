@@ -1,0 +1,65 @@
+service: sandbox
+shell: fish
+
+# Default container runtime; override with CONTAINER_RUNTIME=podman|docker.
+runtime: podman
+
+# Base settings merged onto the service, per runtime.
+base:
+  runtimes:
+    podman:
+      userns_mode: keep-id
+      security_opt: [label=disable]
+    docker:
+      user: "${USER_UID}:${USER_GID}"
+
+features: [home, wayland, x11, audio, gpu]
+
+# Host paths mirrored into the container at the same path. A bare path uses the
+# same target and the "z" option; use {source, target, options} for full control.
+mounts:
+  - ~/.config/opencode
+  - ~/.local/share/opencode
+  - ~/.opencode
+  - ~/.agents
+  - ~/Github
+  - ~/worktrees
+
+# Feature sets are arbitrary compose service fragments. Any mapping may carry a
+# `runtimes:` block with per-runtime overrides (applied when that runtime is active).
+feature_sets:
+  home:
+    volumes:
+      - "./sandbox_home:${HOME}:z"
+  wayland:
+    environment:
+      - "WAYLAND_DISPLAY=${WAYLAND_DISPLAY}"
+      - "XDG_RUNTIME_DIR=/tmp"
+    volumes:
+      - "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}:/tmp/${WAYLAND_DISPLAY}:z"
+  x11:
+    environment:
+      - "DISPLAY=${DISPLAY-:0}"
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:z"
+  audio:
+    environment:
+      - "PULSE_SERVER=unix:/tmp/pulse-native"
+    devices:
+      - "/dev/snd:/dev/snd"
+    volumes:
+      - "${XDG_RUNTIME_DIR}/pulse/native:/tmp/pulse-native:z"
+  gpu:
+    runtimes:
+      podman:
+        environment:
+          - "NVIDIA_VISIBLE_DEVICES=all"
+          - "NVIDIA_DRIVER_CAPABILITIES=all"
+        devices:
+          - "nvidia.com/gpu=all"
+      docker:
+        deploy:
+          resources:
+            reservations:
+              devices:
+                - {driver: nvidia, count: all, capabilities: [gpu]}

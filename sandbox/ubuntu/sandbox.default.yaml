@@ -1,0 +1,3 @@
+# ubuntu-specific overrides, deep-merged over ../../sandbox.default.yaml.
+# Only distro deltas belong here; common settings stay in the shared base.
+{}
