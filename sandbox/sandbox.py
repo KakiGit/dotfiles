@@ -130,12 +130,36 @@ def build_service(config, dockerfile=None):
     return config.get("service", "sandbox"), service
 
 
+def ensure_mount_dirs(service):
+    """Pre-create sandbox_home subdirs for in-home mount targets.
+
+    Podman creates missing target paths as container-root, which in the
+    rootless userns lands on the host as an uid the container user cannot
+    write; creating them here keeps them owned by the invoking user.
+    """
+    volumes = service.get("volumes", [])
+    home_target = next(
+        (v.split(":")[1] for v in volumes if os.path.normpath(v.split(":")[0]) == "sandbox_home"),
+        None,
+    )
+    if not home_target:
+        return
+
+    prefix = home_target.rstrip("/") + "/"
+    sandbox_home = os.path.join(SANDBOX_DIR, "sandbox_home")
+    for volume in volumes:
+        target = volume.split(":")[1]
+        if target.startswith(prefix):
+            os.makedirs(os.path.join(sandbox_home, target[len(prefix):]), exist_ok=True)
+
+
 def prepare():
     seed_config()
     raw = load(CONFIG)
     runtime = os.environ.get("CONTAINER_RUNTIME") or raw.get("runtime") or "podman"
     dockerfile = compose_dockerfile(overlay_dockerfiles())
     name, service = build_service(resolve_runtime(raw, runtime), dockerfile)
+    ensure_mount_dirs(service)
     with open(COMPOSE_FILE, "w") as f:
         yaml.safe_dump({"services": {name: service}}, f, default_flow_style=False, sort_keys=False)
     return runtime, name
