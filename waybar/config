@@ -135,7 +135,8 @@
         "scroll-step": 5
     },
     "network": {
-        "format-wifi": "  {signalStrength}%",
+        "interval": 2,
+        "format-wifi": "  {signalStrength}% {bandwidthUpBytes} {bandwidthDownBytes}",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
