@@ -18,6 +18,7 @@ fish, `source`/`config-file` for zsh/tmux/ghostty).
 - `setup.sh host-id` — print this machine's derived id
 - `setup.sh host-overlay` — (re)apply this machine's decrypted config
 - `setup.sh scaffold <app/path>` — create a host file from a `.example` template
+- `sops-edit.sh <app/path>` — edit a host file in `$EDITOR`; re-encrypts it and redeploys to `~/.config/`
 - `setup.sh bootstrap-identity` — generate this machine's age key
 - `setup.sh add-host <hostname> <age-pubkey>` — register a machine (admin)
 - `setup.sh gen-sops-config` — regenerate `.sops.yaml` (admin)

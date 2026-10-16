@@ -58,6 +58,8 @@ tooltip {
 #bluetooth,
 #custom-temperature,
 #custom-memory,
+#memory,
+#disk,
 #workspaces,
 #tray,
 #backlight {
@@ -74,6 +76,20 @@ tooltip {
 #custom-memory {
     color: #eba0ac;
     border-radius: 10px 0px 0px 10px;
+}
+
+#memory {
+    color: #eba0ac;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#disk {
+    color: #94e2d5;
+    border-left: 0px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
 }
 
 #custom-temperature {

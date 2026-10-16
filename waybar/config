@@ -21,6 +21,8 @@
         // "backlight",
         "pulseaudio",
         "pulseaudio#microphone",
+        "memory",
+        "disk",
         "tray"
     ],
     "sway/workspaces": {
@@ -60,6 +62,18 @@
         "format": "🧠 {}",
         "interval": 30,
         "exec": "memory"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "🧠 {avail:.0f}G free",
+        "tooltip-format": "RAM: {used} / {total} ({percentage}%)"
+    },
+    "disk": {
+        "interval": 30,
+        "path": "/",
+        "unit": "GiB",
+        "format": "💾 {specific_free:.0f}G free",
+        "tooltip-format": "{path}: {used} / {total} used ({percentage_used}%)"
     },
     "tray": {
         "icon-size": 18,
