@@ -90,4 +90,11 @@ export EDITOR=nvim
 eval "$(zoxide init zsh)"
 alias lg="lazygit"
 alias yz="yazi"
+
+# Machine-specific config (decrypted from hosts/<id>/ by setup.sh)
+for _cfg in "$HOME"/.config/zsh/config.d/*.zsh(N); do
+    source "$_cfg"
+done
+unset _cfg
+
 fastfetch

@@ -20,3 +20,6 @@ window-padding-y = 20
 
 # Adds 10 pixels of padding on the left and right (optional, but looks better)
 window-padding-x = 10
+
+# Machine-specific config (decrypted from hosts/<id>/ by setup.sh)
+config-file = ?~/.config/ghostty/config.d/*

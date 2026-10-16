@@ -239,3 +239,6 @@ bar {
 exec_always --no-startup-id feh --bg-max ~/Downloads/cloud.jpg
 exec --no-startup-id fcitx
 exec --no-startup-id copyq
+
+# Machine-specific config (decrypted from hosts/<id>/ by setup.sh)
+include ~/.config/i3/config.d/*

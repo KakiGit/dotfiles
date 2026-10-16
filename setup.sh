@@ -368,15 +368,17 @@ _setup_zsh() {
     _git_clone_or_rebase "https://github.com/bhilburn/powerlevel9k.git" ~/.oh-my-zsh/custom/themes/powerlevel9k
     _git_clone_or_rebase "https://github.com/zsh-users/zsh-syntax-highlighting.git" "${zsh_custom}/plugins/zsh-syntax-highlighting"
     _git_clone_or_rebase "https://github.com/zsh-users/zsh-autosuggestions" "${zsh_custom}/plugins/zsh-autosuggestions"
+    mkdir -p ~/.config/zsh/config.d
     ln -snf "${DOTFILES_DIR}/zsh/zshrc" "${HOME}/.zshrc"
 }
 
 _setup_tmux() {
+    mkdir -p ~/.config/tmux/config.d
     ln -snf "${DOTFILES_DIR}/tmux/tmux.conf" "${HOME}/.tmux.conf"
 }
 
 _setup_i3() {
-    mkdir -p ~/.config/i3
+    mkdir -p ~/.config/i3/config.d
     ln -snf "${DOTFILES_DIR}/i3/config" "${HOME}/.config/i3/config"
 }
 
@@ -389,7 +391,7 @@ _setup_sway() {
 }
 
 _setup_hypr() {
-    mkdir -p ~/.config/hypr
+    mkdir -p ~/.config/hypr/config.d
     ln -snf "${DOTFILES_DIR}/hypr/hyprland.conf" "${HOME}/.config/hypr/hyprland.conf"
 }
 
@@ -416,7 +418,7 @@ _setup_i3blocks() {
 }
 
 _setup_ghostty() {
-    mkdir -p ~/.config/ghostty
+    mkdir -p ~/.config/ghostty/config.d
     ln -snf "${DOTFILES_DIR}/ghostty/config.ghostty" "${HOME}/.config/ghostty/config"
 }
 
