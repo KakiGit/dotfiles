@@ -4,3 +4,5 @@ sandbox/.venv/
 sandbox/*/sandbox.yaml
 sandbox/*/docker-compose.yml
 sandbox/*/sandbox_home/
+sandbox/*/Dockerfile.sandbox
+sandbox/*/Dockerfile.d/

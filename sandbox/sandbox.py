@@ -17,11 +17,19 @@ BASE_DEFAULT = os.path.join(SCRIPT_DIR, "sandbox.default.yaml")
 TYPE_DEFAULT = os.path.join(TYPE_DIR, "sandbox.default.yaml")
 CONFIG = os.path.join(SANDBOX_DIR, "sandbox.yaml")
 COMPOSE_FILE = os.path.join(SANDBOX_DIR, "docker-compose.yml")
+BASE_DOCKERFILE = os.path.join(TYPE_DIR, "Dockerfile")
+OVERLAY_DIR = os.path.join(SANDBOX_DIR, "Dockerfile.d")
+GENERATED_DOCKERFILE = os.path.join(TYPE_DIR, "Dockerfile.sandbox")
 
 
 def load(path):
     with open(path) as f:
         return yaml.safe_load(f) or {}
+
+
+def read_text(path):
+    with open(path) as f:
+        return f.read()
 
 
 def deep_merge(dst, src):
@@ -76,7 +84,29 @@ def seed_config():
         yaml.safe_dump(config, f, default_flow_style=False, sort_keys=False)
 
 
-def build_service(config):
+def overlay_dockerfiles():
+    """User overlays, applied in sorted filename order (use NN- prefixes)."""
+    if not os.path.isdir(OVERLAY_DIR):
+        return []
+    return sorted(
+        os.path.join(OVERLAY_DIR, name)
+        for name in os.listdir(OVERLAY_DIR)
+        if name.endswith(".Dockerfile")
+    )
+
+
+def compose_dockerfile(overlays):
+    """Append user overlay Dockerfiles to the base into one generated file."""
+    if not overlays:
+        return None
+    parts = [read_text(BASE_DOCKERFILE)]
+    parts += [f"# ---- {os.path.basename(p)} ----\n{read_text(p)}" for p in overlays]
+    with open(GENERATED_DOCKERFILE, "w") as f:
+        f.write("\n".join(part.rstrip("\n") for part in parts) + "\n")
+    return os.path.basename(GENERATED_DOCKERFILE)
+
+
+def build_service(config, dockerfile=None):
     user = config.get("user", {})
     service = {
         "build": {
@@ -88,6 +118,8 @@ def build_service(config):
             },
         }
     }
+    if dockerfile:
+        service["build"]["dockerfile"] = dockerfile
     deep_merge(service, config.get("base"))
     feature_sets = config.get("feature_sets", {})
     for name in config.get("features", []):
@@ -102,7 +134,8 @@ def prepare():
     seed_config()
     raw = load(CONFIG)
     runtime = os.environ.get("CONTAINER_RUNTIME") or raw.get("runtime") or "podman"
-    name, service = build_service(resolve_runtime(raw, runtime))
+    dockerfile = compose_dockerfile(overlay_dockerfiles())
+    name, service = build_service(resolve_runtime(raw, runtime), dockerfile)
     with open(COMPOSE_FILE, "w") as f:
         yaml.safe_dump({"services": {name: service}}, f, default_flow_style=False, sort_keys=False)
     return runtime, name

@@ -1,3 +1,6 @@
 *
 !Dockerfile
+!Dockerfile.sandbox
 !entrypoint.fish
+!Dockerfile.d
+!context
