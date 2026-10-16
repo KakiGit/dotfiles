@@ -1,0 +1,16 @@
+# Machine-specific display configuration.
+# This file is NOT tracked by git; setup.sh copies it to
+# ~/.config/sway/config.d/monitor.conf on first run. Edit freely per machine.
+# The generic config in the repo includes everything in that directory.
+
+output "*" {
+    background "~/Downloads/cloud.jpg" fill
+}
+
+# Example: external 4K monitor with HiDPI scaling and a custom ICC profile.
+# output "HDMI-A-2" {
+#     mode 3840x2160@60Hz
+#     scale 2
+#     render_bit_depth 10
+#     color_profile icc ~/lg_sdr.icm
+# }

@@ -40,6 +40,18 @@ _git_clone_or_rebase() {
     fi
 }
 
+_scaffold_config() {
+    local template="$1"
+    local target="$2"
+
+    if [[ -e "${target}" ]]; then
+        return 0
+    fi
+
+    cp "${template}" "${target}"
+    echo "Created ${target} (edit it for machine-specific settings)"
+}
+
 _check_binaries() {
     local features="$1"
     local -a required=("git" "curl")
@@ -110,8 +122,11 @@ _setup_i3() {
 }
 
 _setup_sway() {
-    mkdir -p ~/.config/sway
+    local config_dir="${HOME}/.config/sway/config.d"
+
+    mkdir -p "${config_dir}"
     ln -snf "${DOTFILES_DIR}/sway/config" "${HOME}/.config/sway/config"
+    _scaffold_config "${DOTFILES_DIR}/sway/config.d/monitor.conf.example" "${config_dir}/monitor.conf"
 }
 
 _setup_hypr() {
@@ -120,8 +135,11 @@ _setup_hypr() {
 }
 
 _setup_waybar() {
-    mkdir -p ~/.config/waybar
+    local config_dir="${HOME}/.config/waybar/config.d"
+
+    mkdir -p "${config_dir}"
     ln -snf "${DOTFILES_DIR}/waybar/config" "${HOME}/.config/waybar/config"
+    _scaffold_config "${DOTFILES_DIR}/waybar/config.d/local.jsonc.example" "${config_dir}/local.jsonc"
     ln -snf "${DOTFILES_DIR}/waybar/style.css" "${HOME}/.config/waybar/style.css"
     ln -snf "${DOTFILES_DIR}/waybar/config-hypr" "${HOME}/.config/waybar/config-hypr"
     ln -snf "${DOTFILES_DIR}/waybar/style-hypr.css" "${HOME}/.config/waybar/style-hypr.css"

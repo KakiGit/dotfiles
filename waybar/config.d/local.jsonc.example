@@ -1,0 +1,6 @@
+// Machine-specific waybar configuration.
+// This file is NOT tracked by git; setup.sh copies it to
+// ~/.config/waybar/config.d/local.jsonc on first run.
+// Includes are additive only: options already set in the main config win.
+{
+}

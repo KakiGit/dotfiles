@@ -261,16 +261,8 @@ bindsym $mod+o exec killall -SIGUSR1 waybar
 # exec i3-config-wizard
 # exec_always --no-startup-id feh --bg-max ~/Downloads/cloud.jpg
 output "*" {
-    background "~/Downloads/cloud.jpg" fill
     adaptive_sync on
 }
-# output "HDMI-A-2" {
-#     mode 3840x2160@60Hz
-#     # mode 3840x2160@119.880Hz
-#     scale 2
-#     render_bit_depth 10
-#     color_profile icc ~/lg_sdr.icm
-# }
 for_window [title="Wargaming.net Game Center"] floating enable
 assign [title="Wargaming.net Game Center"] workspace $ws6
 exec --no-startup-id fcitx5 -d
@@ -278,4 +270,5 @@ exec --no-startup-id sleep 5 && copyq --start-server
 # exec wl-paste --watch copyq add -
 # bindsym $mod+Shift+s exec bluetoothctl connect XX:XX:XX:XX:XX:XX
 bindsym $mod+Shift+a exec slurp | grim -g - - | wl-copy && wl-paste > ~/Documents/screenshot-$(date).png
+include ~/.config/sway/config.d/*
 include /etc/sway/config.d/*
