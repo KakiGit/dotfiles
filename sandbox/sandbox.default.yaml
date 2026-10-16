@@ -6,6 +6,7 @@ runtime: podman
 
 # Base settings merged onto the service, per runtime.
 base:
+  network_mode: host
   runtimes:
     podman:
       userns_mode: keep-id
