@@ -37,3 +37,11 @@ encrypted blob up offsite. Each machine holds only its own key at
 `~/.config/sops/age/keys.txt`; only that host and the admin key can read its
 directory.
 
+### Sandboxes
+
+The sandbox containers run `setup.sh` too, but their hostname is random and
+must not become a new host id. The sandbox pins a stable identity
+(`DOTFILES_HOST=sandbox`, `hostname: sandbox`) and, because it is detected via
+`SANDBOX_IN_CONTAINER`, applies only the generic config — the encrypted host
+overlay and secrets are skipped. Set `DOTFILES_HOST_OVERLAY=1` to opt in.
+

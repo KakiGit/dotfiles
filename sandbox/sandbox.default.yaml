@@ -7,6 +7,11 @@ runtime: podman
 # Base settings merged onto the service, per runtime.
 base:
   network_mode: host
+  # Stable identity inside the sandbox: the container hostname is random and
+  # must not leak into dotfiles' host id (setup.sh uses DOTFILES_HOST).
+  hostname: sandbox
+  environment:
+    - DOTFILES_HOST=sandbox
   runtimes:
     podman:
       userns_mode: keep-id

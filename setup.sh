@@ -114,7 +114,16 @@ _sops_decrypt_to() {
     mv "${target}.tmp.$$" "${target}"
 }
 
+_host_overlay_enabled() {
+    [[ -z "${SANDBOX_IN_CONTAINER:-}" || -n "${DOTFILES_HOST_OVERLAY:-}" ]]
+}
+
 _setup_host_overlay() {
+    if ! _host_overlay_enabled; then
+        echo "sandbox: skipping encrypted host overlay"
+        return 0
+    fi
+
     _require_sops
 
     if [[ ! -f "${SALT_FILE}" ]]; then
