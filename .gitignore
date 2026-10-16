@@ -1,8 +1,18 @@
 lazy-lock.json
 
+__pycache__/
+*.pyc
+
 sandbox/.venv/
 sandbox/*/sandbox.yaml
 sandbox/*/docker-compose.yml
 sandbox/*/sandbox_home/
 sandbox/*/Dockerfile.sandbox
 sandbox/*/Dockerfile.d/
+
+# age/sops private keys must never be committed
+*.agekey
+*.age
+keys.txt
+admin-keys.txt
+*.sops.tmp.*
