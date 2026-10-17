@@ -29,6 +29,7 @@ declare -A FEATURE_BINARIES=(
     [i3blocks]="i3blocks"
     [ghostty]="ghostty"
     [fcitx5]="fcitx5"
+    [pulse]="pulseaudio pactl"
     [sandbox]="python3"
 )
 
@@ -445,6 +446,11 @@ _setup_fcitx5() {
     mkdir -p ~/.local/share/fcitx5
     ln -snf "${DOTFILES_DIR}/fcitx5/config" "${HOME}/.config/fcitx5"
     ln -snf "${DOTFILES_DIR}/fcitx5/rime" "${HOME}/.local/share/fcitx5/rime"
+}
+
+_setup_pulse() {
+    mkdir -p ~/.config/pulse
+    ln -snf "${DOTFILES_DIR}/pulse/default.pa" "${HOME}/.config/pulse/default.pa"
 }
 
 _setup_wechat() {

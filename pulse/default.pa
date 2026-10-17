@@ -1,0 +1,7 @@
+# User-level PulseAudio config; overrides /etc/pulse/default.pa.
+# Keep the distro defaults, then add our own modules below.
+.include /etc/pulse/default.pa
+
+# Make newly connected sinks/sources (e.g. Bluetooth speakers) the default
+# and move existing playback streams to them.
+load-module module-switch-on-connect
