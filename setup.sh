@@ -444,8 +444,8 @@ _setup_ghostty() {
 
 _setup_fcitx5() {
     mkdir -p ~/.local/share/fcitx5
-    ln -snf "${DOTFILES_DIR}/fcitx5/config" "${HOME}/.config/fcitx5"
-    ln -snf "${DOTFILES_DIR}/fcitx5/rime" "${HOME}/.local/share/fcitx5/rime"
+    _link_config "${DOTFILES_DIR}/fcitx5/config" "${HOME}/.config/fcitx5"
+    _link_config "${DOTFILES_DIR}/fcitx5/rime" "${HOME}/.local/share/fcitx5/rime"
 }
 
 _setup_pulse() {

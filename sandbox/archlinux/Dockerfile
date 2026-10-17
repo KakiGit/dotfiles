@@ -9,6 +9,7 @@ RUN pacman -Syu --noconfirm && \
     fd firefox less noto-fonts-emoji android-tools scrcpy \
     vulkan-icd-loader vulkan-tools zenity \
     fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-chinese-addons dbus adobe-source-han-sans-cn-fonts noto-fonts-emoji \
+    fcitx5-configtool rime-double-pinyin \
     && \
     rm -rf /var/cache/pacman/pkg/*
 
