@@ -65,14 +65,14 @@
     },
     "memory": {
         "interval": 30,
-        "format": "🧠 {avail:.0f}G free",
+        "format": "🧠 {avail:.0f}G",
         "tooltip-format": "RAM: {used} / {total} ({percentage}%)"
     },
     "disk": {
         "interval": 30,
         "path": "/",
         "unit": "GiB",
-        "format": "💾 {specific_free:.0f}G free",
+        "format": "💾 {specific_free:.0f}G",
         "tooltip-format": "{path}: {used} / {total} used ({percentage_used}%)"
     },
     "tray": {
