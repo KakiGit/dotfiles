@@ -30,6 +30,12 @@ RUN chmod +x /entrypoint.fish
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 
+# yay is not in the official repos; build it from the AUR as the sandbox user
+# (makepkg refuses root). Build in /tmp so nothing leaks into the user's home.
+RUN git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin && \
+    (cd /tmp/yay-bin && makepkg -si --noconfirm) && \
+    rm -rf /tmp/yay-bin
+
 ENV SANDBOX_IN_CONTAINER=1
 
 CMD ["/usr/bin/catatonit", "--", "/entrypoint.fish"]

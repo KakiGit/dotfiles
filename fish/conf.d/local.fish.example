@@ -1,0 +1,4 @@
+# Machine-specific fish configuration.
+# This file is NOT tracked by git; setup.sh copies it to
+# ~/.config/fish/conf.d/local.fish, which fish sources automatically.
+set -gx EDITOR nvim

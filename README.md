@@ -11,12 +11,13 @@ exposed in this repository.
 
 `setup.sh` decrypts the matching host directory into `~/.config/...`, which the
 generic configs include (`config.d/` for sway/waybar/i3/hypr, `conf.d/` for
-fish, `source`/`config-file` for zsh/tmux/ghostty).
+fish, `source`/`config-file` for zsh/tmux/ghostty). Only apps selected via
+`FEATURES` are decrypted and applied.
 
 ### Commands
 
 - `setup.sh host-id` — print this machine's derived id
-- `setup.sh host-overlay` — (re)apply this machine's decrypted config
+- `setup.sh host-overlay` — (re)apply this machine's decrypted config for the apps in `FEATURES`
 - `setup.sh scaffold <app/path>` — create a host file from a `.example` template
 - `sops-edit.sh <app/path>` — edit a host file in `$EDITOR`; re-encrypts it and redeploys to `~/.config/`
 - `setup.sh bootstrap-identity` — generate this machine's age key

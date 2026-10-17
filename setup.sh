@@ -119,6 +119,7 @@ _host_overlay_enabled() {
 }
 
 _setup_host_overlay() {
+    local features="${1// /}"
     if ! _host_overlay_enabled; then
         echo "sandbox: skipping encrypted host overlay"
         return 0
@@ -145,9 +146,14 @@ _setup_host_overlay() {
     fi
 
     echo "Applying host overlay ${id} (host ${HOST})..."
-    local src rel target mode
+    local src rel target mode app
     while IFS= read -r -d '' src; do
         rel="${src#"${host_root}/"}"
+        app="${rel%%/*}"
+        case ",${features}," in
+            *,${app},*) ;;
+            *) continue ;;
+        esac
         target="${HOME}/.config/${rel%.sops}"
         case "${rel}" in
             secrets/*|*/secrets/*) mode="600" ;;
@@ -334,6 +340,10 @@ _check_binaries() {
         fi
     done
 
+    if [[ -f "${SALT_FILE}" ]] && _host_overlay_enabled; then
+        required+=("sops" "age-keygen")
+    fi
+
     for req in "${required[@]}"; do
         if ! command -v "${req}" &> /dev/null; then
             echo "${req} is not installed in your machine"
@@ -464,7 +474,7 @@ main() {
 
     echo "Done!"
 
-    _setup_host_overlay
+    _setup_host_overlay "${FEATURES}"
 }
 
 case "${1:-}" in
@@ -476,7 +486,7 @@ case "${1:-}" in
         _host_id
         ;;
     host-overlay)
-        _setup_host_overlay
+        _setup_host_overlay "${FEATURES}"
         ;;
     bootstrap-identity)
         _bootstrap_identity
