@@ -165,8 +165,31 @@ def prepare():
     return runtime, name
 
 
-def running(runtime):
-    result = subprocess.run([*compose_cmd(runtime), "ps", "-q"], capture_output=True, text=True)
+def running(runtime, service):
+    """True iff the service has a container in the running state.
+
+    podman-compose `ps` also lists stopped containers (docker compose does
+    not), so for podman ask the engine directly for running containers
+    carrying the project/service labels it stamps on compose containers.
+    """
+    compose = compose_cmd(runtime)
+    if compose[0].startswith("podman"):
+        project = os.path.basename(SANDBOX_DIR)
+        result = subprocess.run(
+            [
+                "podman",
+                "ps",
+                "-q",
+                "--filter",
+                f"label=io.podman.compose.project={project}",
+                "--filter",
+                f"label=io.podman.compose.service={service}",
+            ],
+            capture_output=True,
+            text=True,
+        )
+    else:
+        result = subprocess.run([*compose, "ps", "-q"], capture_output=True, text=True)
     return bool(result.stdout.strip())
 
 
@@ -184,7 +207,7 @@ def cmd_up(args):
 
 def cmd_exec(args):
     runtime, name = prepare()
-    if not running(runtime):
+    if not running(runtime, name):
         cmd_up([])
         runtime, name = prepare()
     command = args or [load(CONFIG).get("shell", "fish")]
