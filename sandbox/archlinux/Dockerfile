@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm && \
-    pacman -S --noconfirm sudo curl fish neovim \
+    pacman -S --noconfirm sudo curl fish neovim tzdata \
     starship git cmake make pyenv \
     zoxide fastfetch lazygit yazi \
     which catatonit wl-clipboard \

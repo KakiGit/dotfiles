@@ -11,6 +11,12 @@ export SANDBOX_SCRIPT_DIR="$SCRIPT_DIR"
 export SANDBOX_TYPE="${SANDBOX_TYPE:-archlinux}"
 export SANDBOX_ROOT="${SANDBOX_ROOT:-$HOME/sandbox}"
 export SANDBOX_DIR="${SANDBOX_ROOT}/${SANDBOX_TYPE}"
+
+# Timezone: inherit the zone of the host that creates the sandbox; the compose
+# default (${SANDBOX_TZ:-UTC}) applies when detection leaves it empty.
+tz="$(timedatectl show -p Timezone --value 2>/dev/null)" || true
+tz="${tz:-$(readlink -f /etc/localtime 2>/dev/null || true)}"
+export SANDBOX_TZ="${SANDBOX_TZ:-${tz##*/zoneinfo/}}"
 VENV="${SANDBOX_VENV:-$SANDBOX_ROOT/.venv}"
 
 [ -d "$SCRIPT_DIR/$SANDBOX_TYPE" ] \

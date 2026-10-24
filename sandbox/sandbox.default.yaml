@@ -12,6 +12,7 @@ base:
   hostname: sandbox
   environment:
     - DOTFILES_HOST=sandbox
+    - TZ=${SANDBOX_TZ:-UTC}
   runtimes:
     podman:
       userns_mode: keep-id
