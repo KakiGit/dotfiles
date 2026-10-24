@@ -4,11 +4,17 @@ creation_rules:
     key_groups:
       - age:
           - age19wg7s645vy6jcqwcq8dzu9qpqx9e4zqvkzp3ackh3afwf3mv9u4se65ute
+          - age1p3h38ultunxx4sse9y5vzmus3sggh8x0e0cqwaahggd3q35mapxs08d9cv
           - age1cpq56pvt54aqf74p86cr2h8pl2hu96elcm3ma0pwjhvpz0lkt4lsdwseh9
   - path_regex: '(^|/)index\.sops\.json$'
     key_groups:
       - age:
           - age19wg7s645vy6jcqwcq8dzu9qpqx9e4zqvkzp3ackh3afwf3mv9u4se65ute
+  - path_regex: '(^|/)hosts/3fydy7uuhzxign7v/'
+    key_groups:
+      - age:
+          - age19wg7s645vy6jcqwcq8dzu9qpqx9e4zqvkzp3ackh3afwf3mv9u4se65ute
+          - age1p3h38ultunxx4sse9y5vzmus3sggh8x0e0cqwaahggd3q35mapxs08d9cv
   - path_regex: '(^|/)hosts/txgdweypf4gq6lkd/'
     key_groups:
       - age:
