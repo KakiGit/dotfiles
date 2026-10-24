@@ -417,13 +417,15 @@ _setup_hypr() {
 
 _setup_waybar() {
     local config_dir="${HOME}/.config/waybar/config.d"
+    local scripts_dir="${HOME}/.config/waybar/scripts"
 
-    mkdir -p "${config_dir}"
+    mkdir -p "${config_dir}" "${scripts_dir}"
     _link_config "${DOTFILES_DIR}/waybar/config" "${HOME}/.config/waybar/config"
     _scaffold_config "${DOTFILES_DIR}/waybar/config.d/local.jsonc.example" "${config_dir}/local.jsonc"
     _link_config "${DOTFILES_DIR}/waybar/style.css" "${HOME}/.config/waybar/style.css"
     _link_config "${DOTFILES_DIR}/waybar/config-hypr" "${HOME}/.config/waybar/config-hypr"
     _link_config "${DOTFILES_DIR}/waybar/style-hypr.css" "${HOME}/.config/waybar/style-hypr.css"
+    _link_config "${DOTFILES_DIR}/waybar/scripts/net-speed.sh" "${scripts_dir}/net-speed.sh"
 }
 
 _setup_terminator() {

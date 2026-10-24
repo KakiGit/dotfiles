@@ -15,6 +15,7 @@
     ],
     "modules-right": [
         "network",
+        "custom/net-speed",
         "bluetooth",
         "battery",
         "backlight",
@@ -135,7 +136,14 @@
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
     },
+    "custom/net-speed": {
+        "format": "{}",
+        "interval": 2,
+        "exec": "~/.config/waybar/scripts/net-speed.sh",
+        "tooltip": false
+    },
     "network": {
+        "interval": 2,
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
