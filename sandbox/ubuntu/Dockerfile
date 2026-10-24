@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     build-essential cmake make \
     python3 python3-venv python3-pip \
     zsh tmux fzf ripgrep fd-find bat btop ffmpeg \
+    zoxide fastfetch lazygit unzip \
     wl-clipboard openssh-client less xdg-utils \
     libgl1 libgl1-mesa-dri mesa-vulkan-drivers libvulkan1 libglib2.0-0 \
     fonts-noto-color-emoji fonts-noto-cjk locales dbus zenity libnotify-bin \
@@ -15,6 +16,16 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y
+
+# pyenv is not apt-packaged; /opt keeps it out from under the ${HOME} mount
+RUN git clone --depth 1 https://github.com/pyenv/pyenv.git /opt/pyenv && \
+    ln -s /opt/pyenv/bin/pyenv /usr/local/bin/pyenv
+
+# yazi is not in Ubuntu repos either; ship the upstream release binary
+RUN curl -fsSL https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-gnu.zip -o /tmp/yazi.zip && \
+    unzip -q /tmp/yazi.zip -d /tmp && \
+    mv /tmp/yazi-x86_64-unknown-linux-gnu/yazi /tmp/yazi-x86_64-unknown-linux-gnu/ya /usr/local/bin/ && \
+    rm -rf /tmp/yazi-x86_64-unknown-linux-gnu /tmp/yazi.zip
 
 RUN locale-gen en_US.UTF-8
 ENV LANG=en_US.UTF-8
