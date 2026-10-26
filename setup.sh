@@ -20,7 +20,7 @@ declare -A FEATURE_BINARIES=(
     [starship]="starship"
     [fzf]="git"
     [zsh]="zsh"
-    [tmux]="tmux"
+    [tmux]="tmux python3"
     [i3]="i3"
     [sway]="sway"
     [hypr]="Hyprland"
@@ -393,8 +393,31 @@ _setup_zsh() {
 }
 
 _setup_tmux() {
-    mkdir -p ~/.config/tmux/config.d
+    local tmux_config_dir="${XDG_CONFIG_HOME:-${HOME}/.config}/tmux"
+    local wk_data_dir="${XDG_DATA_HOME:-${HOME}/.local/share}/tmux/plugins/tmux-which-key"
+
+    mkdir -p "${tmux_config_dir}/config.d"
     ln -snf "${DOTFILES_DIR}/tmux/tmux.conf" "${HOME}/.tmux.conf"
+
+    # which-key menu definition (tmux-which-key reads it from the XDG path)
+    mkdir -p "${tmux_config_dir}/plugins/tmux-which-key"
+    ln -snf "${DOTFILES_DIR}/tmux/which-key.yaml" \
+        "${tmux_config_dir}/plugins/tmux-which-key/config.yaml"
+
+    _git_clone_or_rebase "https://github.com/tmux-plugins/tpm.git" \
+        "${HOME}/.tmux/plugins/tpm"
+    # Install @plugin entries headlessly (tmux does not need to be running)
+    if ! "${HOME}/.tmux/plugins/tpm/bin/install_plugins"; then
+        echo "tmux plugins not installed automatically; start tmux and press C-x + I" >&2
+    fi
+
+    # Build the which-key menus now so a bad tmux/which-key.yaml fails loudly
+    # here instead of silently on first tmux start
+    mkdir -p "${wk_data_dir}"
+    python3 "${HOME}/.tmux/plugins/tmux-which-key/plugin/build.py" \
+        "${tmux_config_dir}/plugins/tmux-which-key/config.yaml" \
+        "${wk_data_dir}/init.tmux" ||
+        echo "tmux-which-key: could not build menus from tmux/which-key.yaml" >&2
 }
 
 _setup_i3() {
