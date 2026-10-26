@@ -74,8 +74,9 @@ _scaffold_config() {
     echo "Created ${target} (edit it for machine-specific settings)"
 }
 
-_require_sops() {
-    for bin in sops age-keygen; do
+_require_bins() {
+    local bin
+    for bin in "$@"; do
         if ! command -v "${bin}" &> /dev/null; then
             echo "${bin} is required for encrypted host configs" >&2
             exit 1
@@ -83,13 +84,21 @@ _require_sops() {
     done
 }
 
+_require_sops() {
+    _require_bins sops age-keygen
+}
+
+_sops() {
+    (cd "${DOTFILES_DIR}" && sops "$@")
+}
+
 _load_salt() {
-    sops --decrypt --extract '["salt"]' "${SALT_FILE}"
+    _sops --decrypt --extract '["salt"]' "${SALT_FILE}"
 }
 
 _host_id() {
     local host="${1:-${HOST}}" salt
-    salt="$(_load_salt)"
+    salt="$(_load_salt)" || return 1
     if command -v python3 &> /dev/null; then
         DOTFILES_SALT="${salt}" DOTFILES_HOST="${host}" DOTFILES_HOST_ID_LEN="${HOST_ID_LEN}" \
             python3 -c 'import os,hmac,hashlib,base64; s=os.environ["DOTFILES_SALT"].encode(); h=os.environ["DOTFILES_HOST"].encode(); n=int(os.environ["DOTFILES_HOST_ID_LEN"]); print(base64.b32encode(hmac.new(s,h,hashlib.sha256).digest()).decode().lower().rstrip("=")[:n])'
@@ -111,7 +120,7 @@ _sops_decrypt_to() {
         *.sops.ini)  args=(--output-type ini) ;;
         *)           args=(--input-type binary --output-type binary) ;;
     esac
-    sops "${args[@]}" --decrypt "${src}" > "${target}.tmp.$$"
+    _sops "${args[@]}" --decrypt "${src}" > "${target}.tmp.$$"
     mv "${target}.tmp.$$" "${target}"
 }
 
@@ -132,10 +141,7 @@ _setup_host_overlay() {
         echo "No ${SALT_FILE}; skipping host overlay"
         return 0
     fi
-    if [[ ! -f "${SOPS_AGE_KEY_FILE}" ]]; then
-        echo "No age key at ${SOPS_AGE_KEY_FILE}; skipping host overlay (run 'setup.sh bootstrap-identity')" >&2
-        return 0
-    fi
+    _register_host
 
     local id host_root
     id="$(_host_id)"
@@ -177,7 +183,7 @@ _bootstrap_identity() {
         age-keygen -o "${SOPS_AGE_KEY_FILE}"
         echo "Created ${SOPS_AGE_KEY_FILE}"
     fi
-    echo "Public key (send to an existing machine to register):"
+    echo "Host public key:"
     age-keygen -y "${SOPS_AGE_KEY_FILE}"
 }
 
@@ -236,7 +242,7 @@ _update_index() {
     plaintext="$(mktemp)"
 
     if [[ -f "${INDEX_FILE}" ]]; then
-        sops --output-type json --decrypt "${INDEX_FILE}" > "${plaintext}"
+        _sops --output-type json --decrypt "${INDEX_FILE}" > "${plaintext}"
     else
         printf '{}\n' > "${plaintext}"
     fi
@@ -254,7 +260,7 @@ elif action == "remove":
 json.dump(data, open(path, "w"), indent=2, sort_keys=True)
 PY
 
-    sops --input-type json --output-type json --encrypt --filename-override "${INDEX_FILE}" \
+    _sops --input-type json --output-type json --encrypt --filename-override "${INDEX_FILE}" \
         "${plaintext}" > "${INDEX_FILE}.new"
     mv "${INDEX_FILE}.new" "${INDEX_FILE}"
     rm -f "${plaintext}"
@@ -274,10 +280,41 @@ _add_host() {
     printf '%s\n' "${pubkey}" > "${HOSTS_DIR}/${id}/pubkey"
     _gen_sops_config "$(_admin_pubkey)"
     _update_index add "${id}" "${hostname}"
-    sops updatekeys "${SALT_FILE}"
+    _sops updatekeys --yes "${SALT_FILE}"
 
     echo "Registered '${hostname}' as ${id}."
     echo "Commit .sops.yaml, hosts/${id}/pubkey, salt.sops.yaml and index.sops.json"
+}
+
+_register_host() {
+    local admin_key="${SOPS_AGE_KEY_FILE%/*}/admin-keys.txt" host_pub
+
+    if _host_id &> /dev/null; then
+        echo "Host ${HOST} is already registered"
+        return 0
+    fi
+
+    if [[ ! -f "${admin_key}" ]]; then
+        echo "Host ${HOST} is not registered yet and no admin key was found." >&2
+        echo "Place the admin (master) key at ${admin_key} and re-run setup.sh;" >&2
+        echo "it registers this host, then removes the key automatically." >&2
+        exit 1
+    fi
+
+    _require_bins python3
+    chmod 600 "${admin_key}"
+
+    echo "Registering host ${HOST} using the admin key..."
+    _bootstrap_identity
+    host_pub="$(age-keygen -y "${SOPS_AGE_KEY_FILE}")"
+
+    (
+        export SOPS_AGE_KEY_FILE="${admin_key}"
+        _add_host "${HOST}" "${host_pub}"
+    )
+
+    shred -u "${admin_key}" 2> /dev/null || rm -f "${admin_key}"
+    echo "Admin key removed from ${admin_key}"
 }
 
 _scaffold() {
@@ -301,7 +338,7 @@ _scaffold() {
 
     mkdir -p "$(dirname "${target}")"
     cp "${template}" "${target}"
-    sops --input-type binary --output-type binary --encrypt --in-place "${target}"
+    _sops --input-type binary --output-type binary --encrypt --in-place "${target}"
     echo "Created ${target}; edit with: sops ${target}"
 }
 
@@ -521,6 +558,11 @@ case "${1:-}" in
         ;;
     bootstrap-identity)
         _bootstrap_identity
+        echo "Send this key to an existing machine, then run: setup.sh add-host <hostname> <age-pubkey>"
+        ;;
+    register-host)
+        _require_sops
+        _register_host
         ;;
     scaffold)
         _require_sops
@@ -538,7 +580,7 @@ case "${1:-}" in
         _secure_admin_key "${2:-}"
         ;;
     *)
-        echo "Usage: setup.sh [host-id|host-overlay|bootstrap-identity|scaffold <path>|add-host <hostname> <age-pubkey>|gen-sops-config|secure-admin-key <outfile>]" >&2
+        echo "Usage: setup.sh [host-id|host-overlay|register-host|bootstrap-identity|scaffold <path>|add-host <hostname> <age-pubkey>|gen-sops-config|secure-admin-key <outfile>]" >&2
         exit 1
         ;;
 esac

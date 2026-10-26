@@ -18,6 +18,7 @@ fish, `source`/`config-file` for zsh/tmux/ghostty). Only apps selected via
 
 - `setup.sh host-id` — print this machine's derived id
 - `setup.sh host-overlay` — (re)apply this machine's decrypted config for the apps in `FEATURES`
+- `setup.sh register-host` — register this machine using the admin key placed at `~/.config/sops/age/admin-keys.txt` (the key is removed afterwards)
 - `setup.sh scaffold <app/path>` — create a host file from a `.example` template
 - `sops-edit.sh <app/path>` — edit a host file in `$EDITOR`; re-encrypts it and redeploys to `~/.config/`
 - `setup.sh bootstrap-identity` — generate this machine's age key
@@ -30,6 +31,16 @@ fish, `source`/`config-file` for zsh/tmux/ghostty). Only apps selected via
 1. On the new machine run `setup.sh bootstrap-identity`, then send its public key.
 2. On a machine with the admin key run `setup.sh add-host <hostname> <age-pubkey>`.
 3. On the new machine run `git pull && setup.sh`.
+
+Or, on the new machine alone, using the admin key:
+
+1. Place the admin key at `~/.config/sops/age/admin-keys.txt`.
+2. Run `setup.sh` (or `setup.sh register-host`). It generates this machine's
+   key, registers itself against the salt/index, and shreds the admin key
+   when done. If the key is missing, `setup.sh` prints these instructions
+   instead.
+3. Commit and push the registration (`git -C ~/dotfiles add -A && git commit
+   && git push`) so other machines can encrypt to this one.
 
 ### Secrets and keys
 
