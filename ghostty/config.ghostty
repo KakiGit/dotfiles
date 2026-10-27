@@ -16,7 +16,7 @@ notify-on-command-finish-after = 10s
 bell-features = system,title,attention,border
 scrollback-limit = 104857600
 # Adds 10 pixels of padding on the top and bottom
-window-padding-y = 20
+window-padding-y = 0,20
 
 # Adds 10 pixels of padding on the left and right (optional, but looks better)
 window-padding-x = 10
