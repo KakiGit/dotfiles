@@ -10,7 +10,14 @@ bus=unix:path=/tmp/dbus-session
 export DBUS_SESSION_BUS_ADDRESS="$bus"
 export QT_IM_MODULE=fcitx GTK_IM_MODULE=fcitx XMODIFIERS=@im=fcitx
 
-[ -S /tmp/dbus-session ] || env -u WAYLAND_DISPLAY dbus-daemon --session --address="$bus" --fork
+# Restart the session bus if it is not actually serving (a stale socket file
+# survives container restarts and would silently leave fcitx5 busless).
+if ! dbus-send --address="$bus" --dest=org.freedesktop.DBus --type=method_call \
+        --print-reply / org.freedesktop.DBus.ListNames >/dev/null 2>&1; then
+    pkill -x fcitx5 2>/dev/null
+    rm -f /tmp/dbus-session
+    env -u WAYLAND_DISPLAY dbus-daemon --session --address="$bus" --fork
+fi
 pgrep -x fcitx5 >/dev/null || { setsid env -u WAYLAND_DISPLAY fcitx5 -d >/tmp/fcitx5_container.log 2>&1 </dev/null & sleep 1; }
 
 exec /opt/wechat/wechat "$@"
