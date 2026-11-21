@@ -105,6 +105,14 @@ start_game() {
     return 1
 }
 
+update_tool() {
+    if "$MAA" update >>"$LOG" 2>&1; then
+        log "maa updated"
+    else
+        log "maa update failed, continuing with current version"
+    fi
+}
+
 run_tasks() {
     local task status=0
     for task in "$@"; do
@@ -124,5 +132,6 @@ if [ "$PRESET" = "ADB" ]; then
     wake_unlock || { log "device still locked (Smart Lock not trusted?); aborting"; exit 1; }
     resize_screen
 fi
+update_tool
 start_game || { log "startup failed after $START_ATTEMPTS attempts"; exit 1; }
 run_tasks "$@"
