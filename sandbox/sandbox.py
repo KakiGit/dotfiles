@@ -76,15 +76,25 @@ def expand_mount(mount):
 
 
 YUBICO_VENDOR = "1050"
+SMARTCARD_CLASS = "0b"
 
 
-def yubikey_devices():
-    """Device nodes for plugged Yubico tokens: the CCID usb node (ykman/PIV via
-    pcscd) and hidraw (FIDO2). Empty when no YubiKey is present."""
+def smartcard_devices():
+    """Device nodes for plugged Yubico tokens (vendor match) and smart-card
+    readers (CCID interface class, e.g. built-in NFC modules): the CCID usb
+    node (ykman/PIV via pcscd) and hidraw (FIDO2). Empty when none is present."""
     devices = []
     try:
         for dev in Path("/sys/bus/usb/devices").iterdir():
-            if ":" in dev.name or (dev / "idVendor").read_text().strip() != YUBICO_VENDOR:
+            if ":" in dev.name:
+                continue
+            yubico = (dev / "idVendor").read_text().strip() == YUBICO_VENDOR
+            reader = any(
+                (i / "bInterfaceClass").read_text().strip() == SMARTCARD_CLASS
+                for i in dev.iterdir()
+                if ":" in i.name
+            )
+            if not (yubico or reader):
                 continue
             bus = int((dev / "busnum").read_text())
             num = int((dev / "devnum").read_text())
@@ -157,7 +167,7 @@ def build_service(config, dockerfile=None):
         deep_merge(service, feature_sets.get(name, {}))
     if "yubikey" in config.get("features", []):
         devices = service.get("devices", [])
-        service["devices"] = devices + [d for d in yubikey_devices() if d not in devices]
+        service["devices"] = devices + [d for d in smartcard_devices() if d not in devices]
     mounts = [expand_mount(m) for m in config.get("mounts", [])]
     if mounts:
         service["volumes"] = service.get("volumes", []) + mounts
@@ -165,26 +175,25 @@ def build_service(config, dockerfile=None):
 
 
 def ensure_mount_dirs(service):
-    """Pre-create sandbox_home subdirs for in-home mount targets.
-
-    Podman creates missing target paths as container-root, which in the
-    rootless userns lands on the host as an uid the container user cannot
-    write; creating them here keeps them owned by the invoking user.
+    """Pre-create host dirs for mounts that podman would otherwise auto-create
+    as container-root, which in the rootless userns lands on the host as an uid
+    the container user cannot write; creating them here keeps them owned by
+    the invoking user. Covers targets inside the sandbox_home home mount and
+    relative ./ bind sources.
     """
     volumes = service.get("volumes", [])
     home_target = next(
         (v.split(":")[1] for v in volumes if os.path.normpath(v.split(":")[0]) == "sandbox_home"),
         None,
     )
-    if not home_target:
-        return
-
-    prefix = home_target.rstrip("/") + "/"
+    prefix = home_target.rstrip("/") + "/" if home_target else None
     sandbox_home = os.path.join(SANDBOX_DIR, "sandbox_home")
     for volume in volumes:
-        target = volume.split(":")[1]
-        if target.startswith(prefix):
+        source, target = volume.split(":")[:2]
+        if prefix and target.startswith(prefix):
             os.makedirs(os.path.join(sandbox_home, target[len(prefix):]), exist_ok=True)
+        elif source.startswith("./"):
+            os.makedirs(os.path.join(SANDBOX_DIR, source[2:]), exist_ok=True)
 
 
 def prepare():

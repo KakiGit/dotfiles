@@ -65,12 +65,19 @@ feature_sets:
     environment:
       - "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
   yubikey:
-    # Raw USB access for ykman/PIV/FIDO2; device paths (CCID usb node + hidraw)
-    # are detected at render time by sandbox.py and nothing is added when no
-    # YubiKey is plugged in. CCID has a single owner: while a container-side
-    # pcscd holds the card (sudo pcscd --disable-polkit), host-side card access
-    # is blocked; hidraw and the forwarded agent above coexist with the host.
+    # Raw USB access for ykman/PIV/FIDO2; device paths (CCID usb node + hidraw,
+    # plus any CCID smart-card reader such as a built-in NFC module) are
+    # detected at render time by sandbox.py and nothing is added when nothing
+    # is present, so hosts without an NFC module render unchanged. CCID has a
+    # single owner: while a container-side pcscd holds the card, host-side card
+    # access is blocked; hidraw and the forwarded agent above coexist with the
+    # host. Start pcscd as the user (not sudo): keep-id carries udev's uaccess
+    # ACL onto the device nodes for the user, which root cannot open in the
+    # rootless userns; the bind mount gives the unprivileged daemon its socket
+    # dir at the canonical path clients expect.
     devices: []
+    volumes:
+      - "./sandbox_home/.pcscd:/run/pcscd:z"
   gpu:
     runtimes:
       podman:
