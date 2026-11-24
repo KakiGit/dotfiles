@@ -20,7 +20,7 @@ base:
     docker:
       user: "${USER_UID}:${USER_GID}"
 
-features: [home, wayland, x11, audio, gpu]
+features: [home, wayland, x11, audio, gpu, gpg, yubikey]
 
 # Host paths mirrored into the container at the same path. A bare path uses the
 # same target and the "z" option; use {source, target, options} for full control.
@@ -56,6 +56,21 @@ feature_sets:
       - "/dev/snd:/dev/snd"
     volumes:
       - "${XDG_RUNTIME_DIR}/pulse/native:/tmp/pulse-native:z"
+  gpg:
+    # Forward the host gpg-agent: the container's ~/.gnupg is the host's, so
+    # gpg/ssh in the sandbox reach the YubiKey through the host agent and
+    # pinentry/touch prompts appear on the host, not in the sandbox.
+    volumes:
+      - "${HOME}/.gnupg:${HOME}/.gnupg:z"
+    environment:
+      - "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
+  yubikey:
+    # Raw USB access for ykman/PIV/FIDO2; device paths (CCID usb node + hidraw)
+    # are detected at render time by sandbox.py and nothing is added when no
+    # YubiKey is plugged in. CCID has a single owner: while a container-side
+    # pcscd holds the card (sudo pcscd --disable-polkit), host-side card access
+    # is blocked; hidraw and the forwarded agent above coexist with the host.
+    devices: []
   gpu:
     runtimes:
       podman:

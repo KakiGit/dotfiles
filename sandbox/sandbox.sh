@@ -17,6 +17,9 @@ export SANDBOX_DIR="${SANDBOX_ROOT}/${SANDBOX_TYPE}"
 tz="$(timedatectl show -p Timezone --value 2>/dev/null)" || true
 tz="${tz:-$(readlink -f /etc/localtime 2>/dev/null || true)}"
 export SANDBOX_TZ="${SANDBOX_TZ:-${tz##*/zoneinfo/}}"
+# Ensure the agent sockets exist in ~/.gnupg so the sandbox gpg/ssh forward to
+# the host agent (and its YubiKey) instead of spawning a card-less local one.
+gpgconf --launch gpg-agent 2>/dev/null || true
 VENV="${SANDBOX_VENV:-$SANDBOX_ROOT/.venv}"
 
 [ -d "$SCRIPT_DIR/$SANDBOX_TYPE" ] \

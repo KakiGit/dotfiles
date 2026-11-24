@@ -6,6 +6,7 @@ import shlex
 import shutil
 import subprocess
 import sys
+from pathlib import Path
 
 import yaml
 
@@ -74,6 +75,36 @@ def expand_mount(mount):
     return f"{source}:{target}:{mount.get('options', 'z')}"
 
 
+YUBICO_VENDOR = "1050"
+
+
+def yubikey_devices():
+    """Device nodes for plugged Yubico tokens: the CCID usb node (ykman/PIV via
+    pcscd) and hidraw (FIDO2). Empty when no YubiKey is present."""
+    devices = []
+    try:
+        for dev in Path("/sys/bus/usb/devices").iterdir():
+            if ":" in dev.name or (dev / "idVendor").read_text().strip() != YUBICO_VENDOR:
+                continue
+            bus = int((dev / "busnum").read_text())
+            num = int((dev / "devnum").read_text())
+            devices.append(f"/dev/bus/usb/{bus:03d}/{num:03d}")
+        for hid in Path("/sys/bus/hid/devices").iterdir():
+            hid_id = next(
+                (line for line in (hid / "uevent").read_text().splitlines()
+                 if line.startswith("HID_ID=")),
+                "",
+            )
+            if f":0000{YUBICO_VENDOR}:" not in hid_id.lower():
+                continue
+            hidraw = next((hid / "hidraw").glob("hidraw*"), None)
+            if hidraw:
+                devices.append(f"/dev/{hidraw.name}")
+    except OSError:
+        pass
+    return devices
+
+
 def seed_config():
     if os.path.exists(CONFIG):
         return
@@ -124,6 +155,9 @@ def build_service(config, dockerfile=None):
     feature_sets = config.get("feature_sets", {})
     for name in config.get("features", []):
         deep_merge(service, feature_sets.get(name, {}))
+    if "yubikey" in config.get("features", []):
+        devices = service.get("devices", [])
+        service["devices"] = devices + [d for d in yubikey_devices() if d not in devices]
     mounts = [expand_mount(m) for m in config.get("mounts", [])]
     if mounts:
         service["volumes"] = service.get("volumes", []) + mounts

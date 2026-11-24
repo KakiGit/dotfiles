@@ -7,6 +7,7 @@ RUN pacman -Syu --noconfirm && \
     which catatonit wl-clipboard \
     openssh base-devel bat btop ffmpeg libxcb mesa glib2 \
     fd firefox less noto-fonts-emoji android-tools scrcpy \
+    gnupg pcsclite ccid opensc yubikey-manager \
     vulkan-icd-loader vulkan-tools zenity \
     fcitx5 fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-chinese-addons dbus adobe-source-han-sans-cn-fonts noto-fonts-emoji \
     fcitx5-configtool rime-double-pinyin \

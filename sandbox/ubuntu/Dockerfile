@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     zsh tmux fzf ripgrep fd-find bat btop ffmpeg \
     zoxide fastfetch lazygit unzip \
     wl-clipboard openssh-client less xdg-utils \
+    gnupg pcscd libccid opensc yubikey-manager \
     libgl1 libgl1-mesa-dri mesa-vulkan-drivers libvulkan1 libglib2.0-0 \
     fonts-noto-color-emoji fonts-noto-cjk locales dbus zenity libnotify-bin \
     android-tools-adb \
