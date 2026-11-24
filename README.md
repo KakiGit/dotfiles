@@ -58,3 +58,21 @@ must not become a new host id. The sandbox pins a stable identity
 `SANDBOX_IN_CONTAINER`, applies only the generic config — the encrypted host
 overlay and secrets are skipped. Set `DOTFILES_HOST_OVERLAY=1` to opt in.
 
+## SMB mounts
+
+`smb/smb.sh` converts a declarative mount list into systemd automount units:
+shares appear on first access and unmount after 10 idle minutes. Mountpoints,
+NAS address and account names live in the encrypted host overlay
+(`hosts/<id>/smb/mounts.conf.sops`); credentials decrypt to
+`~/.config/smb/secrets/<account>` (mode 0600).
+
+```
+FEATURES=vim,fish,starship,fzf,smb setup.sh
+setup.sh scaffold smb/mounts.conf   && sops-edit.sh smb/mounts.conf
+setup.sh scaffold smb/secrets/media && sops-edit.sh smb/secrets/media
+~/dotfiles/smb/smb.sh dry           # preview the generated units
+~/dotfiles/smb/smb.sh               # install via sudo (safe to re-run)
+```
+
+Server and firewall hardening steps: `smb/hardening-checklist.md`.
+

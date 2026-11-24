@@ -31,6 +31,7 @@ declare -A FEATURE_BINARIES=(
     [fcitx5]="fcitx5"
     [pulse]="pulseaudio pactl"
     [sandbox]="python3"
+    [smb]="systemd-escape"
 )
 
 _git_clone_or_rebase() {
@@ -523,6 +524,17 @@ _setup_wechat() {
 _setup_sandbox() {
     chmod +x "${DOTFILES_DIR}/sandbox/sandbox.sh" "${DOTFILES_DIR}/sandbox/sandbox.py"
     ln -sfn "${DOTFILES_DIR}/sandbox" "${HOME}/sandbox"
+}
+
+_setup_smb() {
+    chmod +x "${DOTFILES_DIR}/smb/smb.sh"
+    if [[ -f "${HOME}/.config/smb/mounts.conf" ]]; then
+        "${DOTFILES_DIR}/smb/smb.sh"
+    else
+        echo "smb: no ~/.config/smb/mounts.conf yet; create it with:"
+        echo "  setup.sh scaffold smb/mounts.conf && sops-edit.sh smb/mounts.conf"
+        echo "  setup.sh scaffold smb/secrets/media && sops-edit.sh smb/secrets/media"
+    fi
 }
 
 main() {

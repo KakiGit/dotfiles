@@ -1,0 +1,16 @@
+# SMB mounts for this machine — source'd by smb/smb.sh.
+#
+# Deploy with the host overlay (encrypted, so the NAS address never enters git):
+#   setup.sh scaffold smb/mounts.conf && sops-edit.sh smb/mounts.conf
+#
+# mount_share <name> <//server/share> </absolute/mountpoint> [extra cifs options]
+#
+# smb.sh sources this file as root but with $HOME remapped to the invoking
+# user's home, so mountpoints stay portable across machines. Always applied:
+# vers=3.1.1, uid/gid, noexec, nosuid, nodev, iocharset=utf8. Extra options
+# are appended afterwards, so "ro" wins where it matters and
+# "credentials=<account>" points at ~/.config/smb/secrets/<account>.
+# 203.0.113.10 is an RFC 5737 documentation address; use your NAS's.
+
+mount_share media //203.0.113.10/media "$HOME/nas/media" ro,credentials=media
+mount_share work  //203.0.113.10/work  "$HOME/nas/work"  credentials=personal
