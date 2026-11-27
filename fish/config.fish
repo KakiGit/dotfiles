@@ -1,6 +1,6 @@
 if status is-interactive
     set -gx EDITOR nvim
-    set -gx nvm_default_version latest
+    set -gx nvm_default_version (string match --regex '^v[0-9]+\.[0-9]+\.[0-9]+$' (path basename $nvm_data/v*) | sort -V | tail -n1)
 
     abbr --add nv "nvim"
     abbr --add lg "lazygit"
@@ -18,6 +18,14 @@ if status is-interactive
             return 1
         end
         ~/sandbox/sandbox.sh $argv
+    end
+
+    function nvm-upgrade --description "Install and activate the latest stable Node"
+        _nvm_index_update; or return
+        set --local ver (string match --entire --regex '^v[0-9]+\.[0-9]+\.[0-9]+ ' <$nvm_data/.index | head --lines=1 | string split ' ')[1]
+        test -n "$ver"; or return
+        nvm install $ver
+        set -gx nvm_default_version $ver
     end
 
     fish_add_path $HOME/bin
@@ -39,6 +47,6 @@ if status is-interactive
     function fish_greeting
         fastfetch
     end
-    nvm use latest
+    test -n "$nvm_default_version"; and nvm use --silent $nvm_default_version
 
 end
